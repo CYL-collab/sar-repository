@@ -1,0 +1,112 @@
+List-Decoding Separable Matrices for Non-Adaptive Combinatorial Group Testing
+Group Testing in Arbitrary Hypergraphs and Related Combinatorial Structures
+Efficient Combinatorial Group Testing: Bridging the Gap between Union-Free and Disjunctive Codes
+Combinatorial Group Testing with Selfish Agents
+From Distribution Learning in Training to Gradient Search in Testing for Combinatorial Optimization
+Property-Preserving Hash Functions and Combinatorial Group Testing
+Structure-Aware Combinatorial Group Testing: A New Method for Pandemic Screening
+Property-Preserving Hash Functions and Combinatorial Group Testing
+Strongly separable matrices for nonadaptive combinatorial group testing
+Smart elements in combinatorial group testing problems with more defectives
+Sparse Combinatorial Group Testing
+Stress-Testing Memcomputing on Hard Combinatorial Optimization Problems
+Combinatorial Group Testing and Sparse Recovery Schemes with Near-Optimal Decoding Time
+Combinatorial Quantitative Group Testing with Adversarially Perturbed Measurements
+Erasure combinatorial batch codes based on nonadaptive group testing
+Symmetric-Key Corruption Detection: When XOR-MACs Meet Combinatorial Group Testing
+Efficient Message Authentication Codes with Combinatorial Group Testing
+Symmetric-key Corruption Detection : When XOR-MACs Meet Combinatorial Group Testing
+Smart elements in combinatorial group testing problems
+Optimal Nested Test Plan for Combinatorial Quantitative Group Testing
+Controller-Centric Combinatorial Wrap-Around Interaction Testing to Evaluate a Stateful PCE-Based Transport Network Architecture
+Tropical Combinatorial Nullstellensatz and Fewnomials Testing
+Improving the trust of end users in enterprise SOA using combinatorial group testing methods
+A combinatorial estimation approach for storage reliability with initial failures based on periodic testing data
+Testing the performance of teaching-learning based optimization (TLBO) algorithm on combinatorial problems: Flow shop and job shop scheduling cases
+Quantum algorithms for search with wildcards and combinatorial group testing
+Improved key integrity checking for high-speed quantum key distribution using combinatorial group testing with strongly selective family design
+Optimal hypothesis testing with combinatorial structure: Detecting random walks on graphs
+Combinatorial aspects of error correction and property testing
+An Efficient Algorithm for Combinatorial Group Testing
+Efficient Sensor Fault Detection Using Combinatorial Group Testing
+Combinatorial Pair Testing: Distinguishing Workers from Slackers
+Lower bounds and structural results in property testing of dense combinatorial structures
+Fast Dynamic Multiple-Set Membership Testing Using Combinatorial Bloom Filters
+Combinatorial Mutation Approach to Web Service Vulnerability Testing Based on SOAP Message Mutations
+Explicit Nonadaptive Combinatorial Group Testing Schemes
+Combinatorial Group Testing for Corruption Localizing Hashing
+Testing multiple gene interactions by the ordered combinatorial partitioning method in case-control studies
+Fast Multiset Membership Testing Using Combinatorial Bloom Filters
+Explicit Non-Adaptive Combinatorial Group Testing Schemes
+Property testing and combinatorial approximation
+New combinatorial structures with applications to efficient group testing with inhibitors
+Private combinatorial group testing
+Explicit Non-adaptive Combinatorial Group Testing Schemes
+Improved Combinatorial Group Testing Algorithms for Real-World Problem Sizes
+Lower bounds for testing forbidden induced substructures in bipartite-graph-like combinatorial objects
+Performance Evaluation of Two Allocation Schemes for Combinatorial Group Testing Fault Isolation
+Performance testing of combinatorial solvers with isomorph class instances
+Non-Adaptive Fault Diagnosis for All-Optical Networks via Combinatorial Group Testing on Graphs
+New and improved BIST diagnosis methods from combinatorial Group testing theory
+A combinatorial group testing method for FPGA fault location
+Improved Combinatorial Group Testing for Real-World Problem Sizes
+Utilisation des Structures Combinatoires pour le Test Statistique (Using Combinatorial Structures for Statistical Testing)
+Combinatorial group testing methods for the BIST diagnosis problem
+New results and applications of superimposed codes (and related combinatorial structures) to the design of efficient group testing procedures
+On the Cut-off Point for Combinatorial Group Testing
+A survey on combinatorial group testing algorithms with applications to DNA Library Screening
+Combinatorial property testing (a survey)
+Combinatorial Property Testing (a survey)
+Testable Realizations of CMOS Combinatorial Circuits for Voltage and Current Testing
+Estimation of reject ratio in testing of combinatorial circuits
+A Power-Efficient CMOS Multi-Band Phased-Array Receiver Covering 24-71-GHz Utilizing Harmonic-Selection Technique With 36-dB Inter-Band Blocker Tolerance for 5G NR
+Laser Array Covering 155 nm Wide Spectral Band Achieved by Selective Area Growth on Silicon Wafer
+A 16-Element Phased-Array Transceiver in 130-nm SiGe BiCMOS for Fixed Wireless Access Covering the Full 57-71 GHz Band
+Wideband MIMO Antenna Array Covering 33-71 GHz for 5G Metal-Rimmed Smartphone Applications
+Tough, bendable and stretchable tactile sensors array for covering robot surfaces
+A new IDDT test approach and its efficiency in covering resistive opens in SRAM arrays
+Hamming-weight constrained coded arrays based on covering codes
+QC-LDPC Codes From Difference Matrices and Difference Covering Arrays
+A new IDDT test approach and its efficiency in covering resistive opens in SRAM arrays
+Wideband MIMO Antenna Array Covering 33-71 GHz for 5G Metal-Rimmed Smartphone Applications
+Stopping and Trapping Sets in Generalized Covering Arrays
+Cyclic Difference Packing and Covering Arrays
+Two dimensional string covering and parallel suffix array construction
+Array Covering: A Technique4 for Enabling Lloop Parallelization
+Minimum fault covering in reconfigurable arrays
+Reconfiguration of VLSI arrays by covering
+Wideband MIMO Antenna Array Covering 3.3-7.1 GHz for 5G Metal-Rimmed Smartphone Applications
+A Survey on Test Case Generation using UML diagrams and Feasibility Study to Generate Combinatorial Logic Oriented Test Cases
+Design-for-Testability for Path Delay Faults in Large Combinatorial Circuits Using Test-Points
+Extending Test-Time Augmentation with Metamorphic Relations for Combinatorial Problems
+Combinatorial-Probabilistic Trade-Off: P-Values of Community Property Test in the Stochastic Block Models
+Combinatorial-Probabilistic Trade-Off: P-Values of Community Properties Test in the Stochastic Block Models
+CAT PAW: Combinatorial Algorithm to Test all Possible Assortments of Weights
+Combinatorial primality test
+Automated generation of oracled test cases with regular expressions and combinatorial techniques
+Compiling a benchmarking test-suite for combinatorial black-box optimization: a position paper
+COMEDI: Combinatorial Election of Diagnostic Vectors From Detection Test Sets for Logic Circuits
+Construction of tests for providing elevated energy consumption for a combinatorial circuit of library elements
+A Stochastic Combinatorial Optimization Model for Test Sequence Optimization
+A Combinatorial Characterization of the Testable Graph Properties: It&apos;s All About Regularity
+Combinatorial Construction of Locally Testable Codes
+A mixed multi-unit combinatorial auctions test suite
+Combinatorial Test Problems and Problem Generators
+A test suite for the evaluation of mixed multi-unit combinatorial auctions
+Combinatorial QSAR Modeling of Chemical Toxicants Tested against Tetrahymena pyriformis
+Combinatorial construction of locally testable codes
+Assignment Testers: Towards a Combinatorial Proof of the PCP Theorem
+Abstract Combinatorial Programs and Efficient Property Testers
+&quot;In Silico&quot; Design of New Uranyl Extractants Based on Phosphoryl-Containing Podands: QSPR Studies, Generation and Screening of Virtual Combinatorial Library, and Experimental Tests
+Analysis of combinatorial user effect in international usability tests
+Assignment Testers: Towards a Combinatorial Proof of the PCP-Theorem
+Abstract Combinatorial Programs and Efficient Property Testers
+Towards a universal test suite for combinatorial auction algorithms
+Combinatorial Algorithms Test Sets [CATS]: The ACM/EATCS Platform for Experimental Research
+Combinatorial Analysis of Check Set Construction for Algorithm-Based Fault Tolerance Systems
+Test Pattern Generation for Combinatorial Multi-Valued Networks Based on Generalized D-Algorithm
+Avoiding Combinatorial Explosion in Automatic Test Generation: Reasoning about Measurements is the Key
+COMPACTEST: A Method to Generate Compact Test Sets for Combinatorial Circuits
+Minimal Test Sets for Combinatorial Circuits
+A realistic approach to detection test generation for combinatorial logic circuits
+Improving IEEE 802.15.4e LLDN performance by relaying and extension of combinatorial testing
