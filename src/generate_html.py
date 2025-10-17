@@ -32,7 +32,41 @@ class Generator:
     """
     Read csv file and calculate statistics for the basic BAR and PIE charts.
     """
-    df = pd.read_csv(self.list_filename, sep=',', header=0)
+    # Read CSV with common encoding fallbacks and normalize column names
+    try:
+      df = pd.read_csv(self.list_filename, sep=',', header=0, encoding='utf-8-sig')
+    except Exception:
+      try:
+        df = pd.read_csv(self.list_filename, sep=',', header=0, encoding='cp1252')
+      except Exception:
+        df = pd.read_csv(self.list_filename, sep=',', header=0, encoding='latin-1', engine='python')
+
+    # Normalize column names to lower-case and trim
+    df.columns = [str(c).strip().lower() for c in df.columns]
+
+    # Map common header names to canonical names expected by the script
+    col_map = {}
+    if 'publication title' in df.columns:
+      col_map['publication title'] = 'booktitle'
+    if 'journal' in df.columns and 'booktitle' not in df.columns:
+      col_map['journal'] = 'booktitle'
+    # apply mapping
+    if col_map:
+      df = df.rename(columns=col_map)
+
+    # Ensure key columns exist
+    if 'year' in df.columns:
+      df['year'] = pd.to_numeric(df['year'], errors='coerce').fillna(0).astype(int)
+    else:
+      # missing year column -> create default
+      df['year'] = 0
+
+    if 'booktitle' not in df.columns:
+      df['booktitle'] = ''
+    if 'title' not in df.columns:
+      df['title'] = ''
+
+    # Now safe to sort
     df = df.sort_values(['year', 'booktitle', 'title'], ascending=False)
     
     # cumulative number of publications
@@ -60,7 +94,18 @@ class Generator:
     year = bar_data.index.values.tolist()
     number = bar_data['number'].values.tolist()
     cumulative = bar_data['cumulative'].values.tolist()
-    index = year.index(2000)    
+    # find index for year 2000 (or first year >= 2000). If not present, start from 0
+    try:
+      index = year.index(2000)
+    except ValueError:
+      index = 0
+      for i, y in enumerate(year):
+        try:
+          if int(y) >= 2000:
+            index = i
+            break
+        except Exception:
+          continue
     data['year'] = year[index:]
     data['number'] = number[index:]
     data['cumulative'] = cumulative[index:]
@@ -85,6 +130,22 @@ class Generator:
       text = file.read()
 
     soup = BeautifulSoup(text, 'html.parser')
+
+    # insert reusable sidebar fragment if available
+    try:
+      with open('components/_sidebar.html', 'r', encoding='utf-8') as sf:
+        sidebar_html = sf.read()
+      # replace existing sidebar region
+      sidebar_start = soup.find(string=lambda text: isinstance(text, str) and '<!-- Sidebar' in text)
+      # safer replacement: find the comment nodes
+      # remove current sidebar block if present by locating the first div.sidebar
+      old_sidebar = soup.find('div', class_='sidebar')
+      if old_sidebar:
+        new_sidebar = BeautifulSoup(sidebar_html, 'html.parser')
+        old_sidebar.replace_with(new_sidebar)
+    except Exception:
+      # ignore if sidebar fragment missing
+      pass
 
     # description and statistics
     element = soup.find(id='replace-description')
@@ -132,6 +193,53 @@ class Generator:
 
     soup = BeautifulSoup(text, 'html.parser')
 
+    # insert reusable sidebar fragment if available
+    try:
+      with open('components/_sidebar.html', 'r', encoding='utf-8') as sf:
+        sidebar_html = sf.read()
+      old_sidebar = soup.find('div', class_='sidebar')
+      if old_sidebar:
+        new_sidebar = BeautifulSoup(sidebar_html, 'html.parser')
+        old_sidebar.replace_with(new_sidebar)
+    except Exception:
+      pass
+
+    # Post-process sidebar for components/list.html context: fix hrefs and active class
+    try:
+      # home link should point to ../index.html from components/
+      home_a = soup.find('i', class_='fas fa-home')
+      if home_a and home_a.parent and home_a.parent.name == 'a':
+        home_link = home_a.parent
+        home_link['href'] = '../index.html'
+      # set All Papers as active and its link to '#'
+      all_papers_icon = soup.find('i', class_='fas fa-layer-group')
+      if all_papers_icon and all_papers_icon.parent and all_papers_icon.parent.name == 'a':
+        all_a = all_papers_icon.parent
+        # In components context, All Papers should point to the local list.html
+        all_a['href'] = 'list.html'
+        # ensure the parent li has active class and remove 'active' from other li siblings
+        li = all_a.find_parent('li')
+        if li:
+          # remove 'active' from sibling li elements to avoid multiple active items
+          parent_ul = li.find_parent('ul')
+          if parent_ul:
+            for sib in parent_ul.find_all('li', recursive=False):
+              classes = sib.get('class', [])
+              if 'active' in classes:
+                classes = [c for c in classes if c != 'active']
+                sib['class'] = classes
+          # now set active on the All Papers li
+          li['class'] = li.get('class', [])
+          if 'active' not in li['class']:
+            li['class'].append('active')
+      # coauthor link should be relative inside components folder
+      co_a_icon = soup.find('i', class_='fas fa-file')
+      if co_a_icon and co_a_icon.parent and co_a_icon.parent.name == 'a':
+        co_a = co_a_icon.parent
+        co_a['href'] = 'coauthor.html'
+    except Exception:
+      pass
+
     # replace "XX papers included"
     element = soup.find(id='replace-description')
     element.string = '{} papers included'.format(len(self.papers))
@@ -164,7 +272,75 @@ class Generator:
       file.write(str(soup))
     print('[INFO] succesfully add {} rows into "components/list.html"'.format(len(self.papers)))
 
+  def generate_coauthor(self):
+    """
+    Generate the static components/coauthor.html from pages/_coauthor.html template.
+    """
+    with open('pages/_coauthor.html', 'r', encoding='utf-8') as file:
+      text = file.read()
+
+    soup = BeautifulSoup(text, 'html.parser')
+
+    # insert sidebar fragment
+    try:
+      with open('components/_sidebar.html', 'r', encoding='utf-8') as sf:
+        sidebar_html = sf.read()
+      old_sidebar = soup.find('div', class_='sidebar')
+      if old_sidebar:
+        new_sidebar = BeautifulSoup(sidebar_html, 'html.parser')
+        old_sidebar.replace_with(new_sidebar)
+    except Exception:
+      pass
+
+    # fix links for components context
+    try:
+      # Home -> ../index.html
+      home_a = soup.find('i', class_='fas fa-home')
+      if home_a and home_a.parent and home_a.parent.name == 'a':
+        home_a.parent['href'] = '../index.html'
+      # All Papers -> list.html
+      all_a_icon = soup.find('i', class_='fas fa-layer-group')
+      if all_a_icon and all_a_icon.parent and all_a_icon.parent.name == 'a':
+        all_a_icon.parent['href'] = 'list.html'
+        # ensure the parent li for All Papers is not accidentally left inactive/active incorrectly
+        all_li = all_a_icon.parent.find_parent('li')
+        if all_li:
+          all_li['class'] = all_li.get('class', [])
+          # remove active from all siblings first
+          for sib in all_li.find_parent('ul').find_all('li', recursive=False):
+            classes = sib.get('class', [])
+            if 'active' in classes:
+              classes = [c for c in classes if c != 'active']
+              sib['class'] = classes
+        
+      # Co-author -> coauthor.html (self)
+      co_a_icon = soup.find('i', class_='fas fa-file')
+      if co_a_icon and co_a_icon.parent and co_a_icon.parent.name == 'a':
+        co_a_icon.parent['href'] = 'coauthor.html'
+        # mark Co-author li as active
+        co_li = co_a_icon.parent.find_parent('li')
+        if co_li:
+          co_li['class'] = co_li.get('class', [])
+          if 'active' not in co_li['class']:
+            co_li['class'].append('active')
+    except Exception:
+      pass
+
+    # write out the generated components/coauthor.html
+    # To avoid any duplicated top-level documents (in case template contains multiple),
+    # write only the first <html> element and prefix with DOCTYPE.
+    first_html = soup.find('html')
+    out_text = ''
+    if first_html:
+      out_text = '<!DOCTYPE html>\n' + str(first_html)
+    else:
+      out_text = str(soup)
+    with open('components/coauthor.html', 'w', encoding='utf-8') as f:
+      f.write(out_text)
+    print('[INFO] succesfully generated components/coauthor.html')
+
 if __name__ == '__main__':
   g = Generator(sort=True)
   g.generate_index(date='Nov 2024')
   g.generate_list()
+  g.generate_coauthor()

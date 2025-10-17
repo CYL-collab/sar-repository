@@ -22,9 +22,9 @@ csv_filename = 'data/list.csv'
 df = pd.read_csv(csv_filename, sep=',', header=0)
 print(df.dtypes)
 
-#df['type'] = df['type'].map(type_formater)
-#df['author'] = df['author'].map(author_formater)
-df['booktitle'] = df['booktitle'].map(venue_formater)
-#df['pages'] = df['pages'].map(lambda x: str(x).replace('--', '-'))
+# df['type'] = df['type'].map(type_formater)
+# df['author'] = df['author'].map(author_formater)
+# df['booktitle'] = df['booktitle'].map(venue_formater)
+# df['pages'] = df['pages'].map(lambda x: str(x).replace('--', '-'))
 
 df.to_csv(csv_filename, sep=',', encoding='utf-8', index=False, header=True)
