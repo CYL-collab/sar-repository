@@ -74,19 +74,63 @@ class Generator:
     bar_data['cumulative'] = bar_data['number'].cumsum()
     print(bar_data)
 
-    # distribution of topics
-    data = {
-    'Analysis': 149,
-    'Indicator': 45,
-    'Rejuvenation': 42,
-    'ARB Prediction': 19,
-    'Classification': 11,
-    'Testing': 11,
-    'Other Mitigation': 8,
-    'Other': 4
+    # distribution of topics - dynamic classification based on repo_analysis_tags
+    field_counts = {
+      'Model-based Analysis': 0,
+      'Measurement-based Analysis': 0,
+      'Hybrid Analysis': 0,
+      'Indicator': 0,
+      'Rejuvenation': 0,
+      'ARB Prediction': 0,
+      # 'Classification': 0,
+      'Testing': 0,
+      'Other Mitigation': 0,
+      'Other': 0
     }
-    # pie_data = df.groupby('field').size().to_frame('count')
-    pie_data = pd.DataFrame(list(data.items()), columns=['field', 'count'])
+    
+    # Process each row and classify based on repo_analysis_tags
+    if 'repo_analysis_tags' in df.columns:
+      for tags_str in df['repo_analysis_tags'].fillna(''):
+        tags_lower = str(tags_str).lower()
+        
+        # Track which categories this row matches (can match multiple)
+        matched = False
+        
+        # Classification rules (in order of priority)
+        if '度量' in tags_lower:
+          field_counts['Indicator'] += 1
+          matched = True
+        elif 'model' in tags_lower:
+          field_counts['Model-based Analysis'] += 1
+          matched = True
+        elif 'measurement' in tags_lower:
+          field_counts['Measurement-based Analysis'] += 1
+          matched = True
+        elif 'hybrid' in tags_lower:
+          field_counts['Hybrid Analysis'] += 1
+          matched = True
+        elif 'arb prediction' in tags_lower or 'arb' in tags_lower:
+          field_counts['ARB Prediction'] += 1
+          matched = True
+        elif 'rej' in tags_lower:
+          field_counts['Rejuvenation'] += 1
+          matched = True
+        elif 'testing' in tags_lower:
+          field_counts['Testing'] += 1
+          matched = True
+        elif 'other' in tags_lower:
+          field_counts['Other Mitigation'] += 1
+          matched = True
+        
+        # If no specific match found, classify as 'Other'
+        if not matched:
+          field_counts['Other'] += 1
+    else:
+      # If repo_analysis_tags column doesn't exist, default to 'Other'
+      field_counts['Other'] = len(df)
+    
+    # Convert to DataFrame and sort by count
+    pie_data = pd.DataFrame(list(field_counts.items()), columns=['field', 'count'])
     pie_data = pie_data.sort_values('count', ascending=False)
 
     # final data

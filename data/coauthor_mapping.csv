@@ -1,510 +1,661 @@
 original_name,canonical_name,canonical_id
-"Costa, Paulo","Costa, Paulo",1
-"Ordonez, Edward","Ordonez, Edward",2
-"Teixeira De Araujo, Jean","Teixeira De Araujo, Jean",3
-"Nie, Yuge","Nie, Yuge",4
-"Chen, Yulei","Chen, Yulei",5
-"Jiang, Yujia","Jiang, Yujia",6
-"Wu, Huayao","Wu, Huayao",7
-"Yin, Bei-Bei","Yin, Bei-Bei",8
-"Yin, Beibei","Yin, Bei-Bei",8
-"Cai, K-Y","Cai, Kai-Yuan",9
-"Cai, Kai-Yuan","Cai, Kai-Yuan",9
-"Cai, Kaiyuan","Cai, Kai-Yuan",9
-"Watanabe, Kengo","Watanabe, Kengo",10
-"Machida, F.","Machida, Fumio",11
-"Machida, Fumio","Machida, Fumio",11
-"Andrade, Ermeson","Andrade, Ermeson C.",12
-"Andrade, Ermeson C.","Andrade, Ermeson C.",12
-"Pietrantuono, Roberto","Pietrantuono, Roberto",13
-"Cotroneo, D.","Cotroneo, Domenico",14
-"Cotroneo, Domenico","Cotroneo, Domenico",14
-"Kaur, Harguneet","Kaur, Harguneet",15
-"Kaur, Arvinder","Kaur, Arvinder",16
-"Parashivamurthy, Shruthi","Parashivamurthy, Shruthi",17
-"Cholli, Nagaraj G.","Cholli, Nagaraj Girish",18
-"Cholli, Nagaraj Girish","Cholli, Nagaraj Girish",18
-"Shi, Fengdong","Shi, Fengdong",19
-"Yuan, Zhi","Yuan, Zhi",20
-"Wang, Min","Wang, Min",21
-"Cui, Jun","Cui, Jun",22
-"Jia, Kai","Jia, Kai",23
-"Yu, Xiao","Yu, Xiao",24
-"Zhang, Chen","Zhang, Chen",25
-"Hu, Wenhua","Hu, Wenhua",26
-"Zhao, Dongdong","Zhao, Dongdong",27
-"Xiang, Jianwen","Xiang, Jianwen",28
-"Qin, Fangyun","Qin, Fangyun",29
-"Zheng, Zheng","Zheng, Zheng",30
-"Wan, Xiaohui","Wan, Xiaohui",31
-"Liu, Zhihao","Liu, Zhihao",32
-"Shi, Zhiping","Shi, Zhiping",33
-"Couto, Herderson","Couto, Herderson",34
-"Silva, Francisco Airton","Silva, Francisco Airton",35
-"Callou, Gustavo","Callou, Gustavo",36
-"Costa, Jackson","Costa, Jackson",37
-"Matos, Rubens","Matos, Rubens",38
-"Araujo, Jean","Araujo, Jean",39
-"Li, Jueying","Li, Jueying",40
-"Choi, Eunmi","Choi, Eunmi",41
-"Nguyen, Tuan Anh","Nguyen, Tuan Anh",42
-"Lee, Jae-Woo","Lee, Jae-Woo",43
-"Min, Dugki","Min, Dugki",44
-"Dias, Douglas","Dias, Douglas",45
-"Tian, Yunzhe","Tian, Yunzhe",46
-"Li, Yike","Li, Yike",47
-"Chen, Kang","Chen, Kang",48
-"Tong, Endong","Tong, Endong",49
-"Niu, Wenjia","Niu, Wenjia",50
-"Liu, Jiqiang","Liu, Jiqiang",51
-"Xie, Wenzhi","Xie, Wenzhi",52
-"Zhou, Junwei","Zhou, Junwei",53
-"Tian, Jing","Tian, Jing",54
-"Avritzer, A.","Avritzer, Alberto",55
-"Avritzer, Alberto","Avritzer, Alberto",55
-"Janes, Andrea","Janes, Andrea",56
-"Marin, Andrea","Marin, Andrea",57
-"van Hoorn, Andre","van Hoorn, Andre",58
-"Camilli, Matteo","Camilli, Matteo",59
-"Trubiani, Catia","Trubiani, Catia",60
-"Menasché, Daniel S.","Menasché, Daniel Sadoc",61
-"Menasché, Daniel Sadoc","Menasché, Daniel Sadoc",61
-"Feng, Shuo","Feng, Shuo",62
-"Natella, R.","Natella, Roberto",63
-"Natella, Roberto","Natella, Roberto",63
-"Hao, Guoze","Hao, Guoze",64
-"Ma, Lianchuan","Ma, Lianchuan",65
-"Kumar, Lov","Kumar, Lov",66
-"Singh, Vikram","Singh, Vikram",67
-"Murthy, Lalita Bhanu","Murthy, Lalita Bhanu",68
-"Misra, Sanjay","Misra, Sanjay",69
-"Krishna, Aneesh","Krishna, Aneesh",70
-"Melo, Carlos","Melo, Carlos",71
-"Oliveira, Felipe","Oliveira, Felipe",72
-"Dantas, Jamilson","Dantas, Jamilson",73
-"Pereira, Paulo","Pereira, Paulo",74
-"Maciel, Ronierison","Maciel, Ronierison",75
-"Maciel, Paulo","Maciel, Paulo R. M.",76
-"Maciel, Paulo R. M.","Maciel, Paulo R. M.",76
-"Maciel, Paulo R.M.","Maciel, Paulo R. M.",76
-"Vinícius, Lucas","Vinícius, Lucas",77
-"Rodrigues, Laécio","Rodrigues, Laécio",78
-"Torquato, Matheus","Torquato, Matheus",79
-"De Simone, Luigi","De Simone, Luigi",80
-"Russo, S.","Russo, Stefano",81
-"Russo, Stefano","Russo, Stefano",81
-"Bai, Jing","Bai, Jing",82
-"Chang, Xiaolin","Chang, Xiaolin",83
-"Jiang, Lili","Jiang, Lili",84
-"Han, Zhen","Han, Zhen",85
-"Trivedi, K.","Trivedi, Kishor S.",86
-"Trivedi, K. S.","Trivedi, Kishor S.",86
-"Trivedi, K.S.","Trivedi, Kishor S.",86
-"Trivedi, Kishor","Trivedi, Kishor S.",86
-"Trivedi, Kishor S.","Trivedi, Kishor S.",86
-"Du, Xiaoting","Du, Xiaoting",87
-"Sui, Yulei","Sui, Yulei",88
-"Ai, J.","Ai, Jun",89
-"Ai, Jun","Ai, Jun",89
-"Ning, Gao-Rong","Ning, Gao-Rong",90
-"Ning, Gaorong","Ning, Gao-Rong",90
-"Zhang, Zhen-Yu","Zhang, Zhenjiang",91
-"Zhang, Zhenjiang","Zhang, Zhenjiang",91
-"Jang, Eun-Tae","Jang, Eun-Tae",92
-"Baek, Sung Hoon","Baek, Sung Hoon",93
-"Park, K.","Park, Kiejin",94
-"Park, Kiejin","Park, Kiejin",94
-"Rahman, Tajmilur","Rahman, Tajmilur",95
-"Nwokeji, Joshua C.","Nwokeji, Joshua C.",96
-"Manjunath, Tejas","Manjunath, Tejas",97
-"Zhang, Jun","Zhang, Jun",98
-"Li, Shuo","Li, Shuo",99
-"He, Pan","He, Pan",100
-"Wada, Takeru","Wada, Takeru",101
-"Yamada, Hiroshi","Yamada, Hiroshi",102
-"Fantechi, Alessandro","Fantechi, Alessandro",103
-"Gori, Gloria","Gori, Gloria",104
-"Papini, Marco","Papini, Marco",105
-"Miranda, Leonardo","Miranda, Leonardo",106
-"Lima, Cabral","Lima, Cabral",107
-"Domingues, Guilherme","Domingues, Guilherme",108
-"Zhou, Yancai","Zhou, Yancai",109
-"Carnevali, Laura","Carnevali, Laura",110
-"Paolieri, Marco","Paolieri, Marco",111
-"Reali, Riccardo","Reali, Riccardo",112
-"Scommegna, Leonardo","Scommegna, Leonardo",113
-"Vicario, Enrico","Vicario, Enrico",114
-"Zheng, Yang","Zheng, Yang",115
-"Hu, Zheng","Hu, Zheng",116
-"Ding, Wenjie","Ding, Wenjie",117
-"Miao, Yanming","Miao, Yanming",118
-"Tan, Xueyong","Tan, Xueyong",119
-"Liu, Jing","Liu, Jing",120
-"Zheng, Junjun","Zheng, Junjun",121
-"Okamura, H.","Okamura, Hiroyuki",122
-"Okamura, Hiroyuki","Okamura, Hiroyuki",122
-"Dohi, T.","Dohi, Tadashi",123
-"Dohi, Tadashi","Dohi, Tadashi",123
-Tadashi Dohi,"Dohi, Tadashi",123
-"Khleel, Nasraldeen Alnor Adam","Khleel, Nasraldeen Alnor Adam",124
-"Nehéz, K.","Nehéz, K.",125
-"Chouhan, S. S.","Chouhan, S. S.",126
-"Rathore, S.","Rathore, S.",127
-"Xiao, Guanping","Xiao, Guanping",128
-"Zhou, Zenghui","Zhou, Zenghui",129
-"Vizarreta, Petra","Vizarreta, Petra",130
-"Sieber, Christian","Sieber, Christian",131
-"Blenk, Andreas","Blenk, Andreas",132
-"Van Bemten, Amaury","Van Bemten, Amaury",133
-"Ramachandra, Vinod","Ramachandra, Vinod",134
-"Kellerer, Wolfgang","Kellerer, Wolfgang",135
-"Mas-Machuca, Carmen","Mas-Machuca, Carmen",136
-"Padhy, Neelamadhab","Padhy, Neelamadhab",137
-"Panigrahi, Rasmita","Panigrahi, Rasmita",138
-"Neeraja, K.","Neeraja, K.",139
-"Liang, Mengting","Liang, Mengting",140
-"Li, Dimeng","Li, Dimeng",141
-"Xu, Bin","Xu, Bin",142
-"Beierlieb, Lukas","Beierlieb, Lukas",143
-"Iffländer, Lukas","Iffländer, Lukas",144
-"Antunes, Nuno","Antunes, Nuno",145
-"Milenkoski, Aleksandar","Milenkoski, Aleksandar",146
-"Kounev, Samuel","Kounev, Samuel",147
-"Flora, José","Flora, José",148
-"Gonçalves, Paulo","Gonçalves, Paulo",149
-"Teixeira, Miguel","Teixeira, Miguel",150
-"Parri, Jacopo","Parri, Jacopo",151
-"Sampietro, Samuele","Sampietro, Samuele",152
-"Czekster, Ricardo M.","Czekster, Ricardo M.",153
-"Yakovyna, Vitaliy","Yakovyna, Vitaliy",154
-"Uhrynovskyi, Bohdan","Uhrynovskyi, Bohdan",155
-"da Costa, Jackson T.","da Costa, Jackson T.",156
-"de S. Matos, Rubens","de S. Matos, Rubens",157
-"de Araujo, Jean C. T.","de Araujo, Jean C. T.",158
-"Li, Mingxi","Li, Mingxi",159
-"Khanna, Megha","Khanna, Megha",160
-"Aggarwal, Mehak","Aggarwal, Mehak",161
-"Singhal, Naman","Singhal, Naman",162
-"Weng, Caisheng","Weng, Caisheng",163
-"Andrzejak, Artur","Andrzejak, Artur",164
-"Xiong, Shengwu","Xiong, Shengwu",165
-"Li, L.","Li, Lingling",166
-"Li, Lin","Li, Lingling",166
-"Li, Lingling","Li, Lingling",166
-"Koutras, V. P.","Koutras, V. P.",167
-"Koutras, V.P.","Koutras, V. P.",167
-"Platis, A. N.","Platis, A. N.",168
-"Platis, A.N.","Platis, A. N.",168
-"Wu, Xiaoxue","Wu, Xiaoxue",169
-"Zheng, Wei","Zheng, Wei",170
-"Pu, Minchao","Pu, Minchao",171
-"Chen, Jie","Chen, Jie",172
-"Mu, Dejun","Mu, Dejun",173
-"P., Shruthi","P., Shruthi",174
-"Jia, Yun-Fei","Jia, Yun-Fei",175
-"Zhou, Zhi Quan","Zhou, Zhi Quan",176
-"Wu, Renbiao","Wu, Renbiao",177
-"Li, Jingwei","Li, Jingwei",178
-"Qi, Yong","Qi, Yong",179
-"Wang, Guanghua","Wang, Guanghua",180
-"Lin, Jinwei","Lin, Jinwei",181
-"Wang, Shuguang","Wang, Shuguang",182
-"Lu, Minyan","Lu, Minyan",183
-"Kong, Shiyi","Kong, Shiyi",184
-"Iannillo, Antonio Ken","Iannillo, Antonio Ken",185
-"Yue, Jing","Yue, Jing",186
-"Wu, Xiaojun","Wu, Xiaojun",187
-"Xue, Yunqing","Xue, Yunqing",188
-"Tang, Minghao","Tang, Minghao",189
-"Zhang, Peng","Zhang, Peng",190
-"Sun, Haoqi","Sun, Haoqi",191
-"Zhang, Lei","Zhang, Lei",192
-"Lins, Luan","Lins, Luan",193
-"Rodrigues, André","Rodrigues, André",194
-"Paing, Aye Myat Myat","Paing, Aye Myat Myat",195
-"Wang, Sihang","Wang, Sihang",196
-"Liu, Qinchen","Liu, Qinchen",197
-"Wang, Jian","Wang, Jian",198
-"Hao, Zeming","Hao, Zeming",199
-"Qiao, Yu","Qiao, Yu",200
-"Fang, Yunyu","Fang, Yunyu",201
-"Meng, Lingze","Meng, Lingze",202
-"Guedes, Erico","Guedes, Erico",203
-"Wang, Yan","Wang, Yan-Bin",204
-"Wang, Yan-Bin","Wang, Yan-Bin",204
-"Wang, Yanbin","Wang, Yan-Bin",204
-"Vieira, Marco","Vieira, Marco",205
-"Umesh, I M","Umesh, I. M.",206
-"Umesh, I. M.","Umesh, I. M.",206
-"Chen, Pengfei","Chen, Pengfei",207
-"Li, Xinyi","Li, Xinyi",208
-"Hou, Di","Hou, Di",209
-"Lyu, Michael Rung-Tsong","Lyu, Michael Rung-Tsong",210
-"Ficco, Massimo","Ficco, Massimo",211
-"Huo, Shouyu","Huo, Shouyu",212
-"Liu, Xing","Liu, Xing",213
-"Zhong, Y.","Zhong, Yingshou",214
-"Zhong, Yingshou","Zhong, Yingshou",214
-"Yu, Haiguo","Yu, Haiguo",215
-"Cai, Lin","Cai, Lin",216
-"Preguiça, Nuno","Preguiça, Nuno",217
-"Srinivasan, G N","Srinivasan, G N",218
-"Tadano, Kumiko","Tadano, Kumiko",219
-"Maeno, Yoshiharu","Maeno, Yoshiharu",220
-"Hua, Xiayu","Hua, Xiayu",221
-"Guo, Chunhui","Guo, Chunhui",222
-"Wu, Hao","Wu, Hao",223
-"Lautner, Douglas","Lautner, Douglas",224
-"Ren, Shangping","Ren, Shangping",225
-"Sukhwani, Harish","Sukhwani, Harish",226
-"Jr., Rivalino Matias","Jr., Rivalino Matias",227
-"Matias Jr., Rivalino","Jr., Rivalino Matias",227
-"Matias, R.","Jr., Rivalino Matias",227
-"Matias, Rivalino","Jr., Rivalino Matias",227
-"Rindos, Andy","Rindos, Andy",228
-"Jumonji, Yuto","Jumonji, Yuto",229
-"Lu, Liping","Lu, Liping",230
-"Yang, Chunhui","Yang, Chunhui",231
-"Li, Dong","Li, Dong",232
-"Jia, Shiqing","Jia, Shiqing",233
-"Hou, Chunyan","Hou, Chunyan",234
-"Wang, Jinsong","Wang, Jinsong",235
-"Li, Xiaodan","Li, Xiaodan",236
-"He, Huihong","He, Huihong",237
-"Wang, Qiang","Wang, Qiang",238
-"Zhang, Hong","Zhang, Hong",239
-"Sureka, Ashish","Sureka, Ashish",240
-"Zhao, Jing","Zhao, Jing",241
-"Lou, Yunlong","Lou, Yunlong",242
-"Alonso, J.","Alonso, Javier",243
-"Alonso, Javier","Alonso, Javier",243
-"Yan, Yongquan","Yan, Yongquan",244
-"Guo, Ping","Guo, Ping",245
-"Escheikh, Mohamed","Escheikh, Mohamed",246
-"Tayachi, Zayneb","Tayachi, Zayneb",247
-"Barkaoui, Kamel","Barkaoui, Kamel",248
-"de Sena, Guilherme O.","de Sena, Guilherme O.",249
-"Valentim, Nathalia Assis","Valentim, Nathalia Assis",250
-"Macedo, Autran","Macedo, Autran",251
-"Fucci, Francesco","Fucci, Francesco",252
-"Nagaraju, Vidhyashree","Nagaraju, Vidhyashree",253
-"Basavaraj, Veeresh Varad","Basavaraj, Veeresh Varad",254
-"Fiondella, Lance","Fiondella, Lance",255
-"Meng, Haining","Meng, Haining",256
-"Liu, Jianjun","Liu, Jianjun",257
-"Hei, Xinhong","Hei, Xinhong",258
-"Kourai, Kenichi","Kourai, Kenichi",259
-"Ooba, Hiroki","Ooba, Hiroki",260
-"Yakhchi, Moona","Yakhchi, Moona",261
-"Fazeli, Mahdi","Fazeli, Mahdi",262
-"Bitaraf, Amir Akhavan","Bitaraf, Amir Akhavan",263
-"Patooqhy, Ahmad","Patooqhy, Ahmad",264
-"Rahme, Jean","Rahme, Jean",265
-"Xu, Haiping","Xu, Haiping",266
-"Wu, Huaming","Wu, Huaming",267
-"Wolter, K.","Wolter, Katinka",268
-"Wolter, Katinka","Wolter, Katinka",268
-"Miyoshi, Naoto","Miyoshi, Naoto",269
-"Mohan, Biju R","Mohan, Biju R",270
-"Reddy, G Ram Mohana","Reddy, G Ram Mohana",271
-"Zhou, Jiantao","Zhou, Jiantao",272
-"Buyya, Rajkumar","Buyya, Rajkumar",273
-"Yamamoto, K.","Yamamoto, K.",274
-"Xu, Jian","Xu, Jian",275
-"Li, Xuefeng","Li, Xuefeng",276
-"Zheng, Pengfei","Zheng, Pengfei",277
-"Zhou, Yangfan","Zhou, Yangfan",278
-"Zhan, Jianfeng","Zhan, Jianfeng",279
-"Barada, Subhashree","Barada, Subhashree",280
-"Swain, Santosh Kumar","Swain, Santosh Kumar",281
-"Alves, Vandi","Alves, Vandi",282
-"Souza, F. Vieira de","Souza, F. Vieira de",283
-"Jin, Yuliang","Jin, Yuliang",284
-"Nicola, V.","Nicola, V.",285
-"Sudhakar, Chapram","Sudhakar, Chapram",286
-"Shah, Ishan","Shah, Ishan",287
-"Ramesh, T.","Ramesh, T.",288
-"Wu, Wang-wen","Wu, Wang-wen",289
-"Ma, Chao-yi","Ma, Chao-yi",290
-"Wang, Cheng-Hong","Wang, Cheng-Hong",291
-"Wang, Qiushi","Wang, Qiushi",292
-"Elias, Diego","Elias, Diego",293
-"Orlando, Salvatore","Orlando, Salvatore",294
-"Kim, Dong Seong","Kim, Dong Seong",295
-"Kim, Dong-Seong","Kim, Dong Seong",295
-"Vicente, E.","Vicente, Elder",296
-"Vicente, Elder","Vicente, Elder",296
-"Maria, A.","Maria, A.",297
-"Bruneo, Dario","Bruneo, Dario",298
-"Distefano, Salvatore","Distefano, Salvatore",299
-"Longo, Francesco","Longo, Francesco",300
-"Puliafito, A.","Puliafito, Antonio",301
-"Puliafito, Antonio","Puliafito, Antonio",301
-"Scarpa, Marco","Scarpa, Marco",302
-"Langner, Felix","Langner, Felix",303
-"Ballerini, Stefano","Ballerini, Stefano",304
-"Luo, Chao","Luo, Chao",305
-"Oliveira, Danilo","Oliveira, Danilo",306
-"Dias, Pedro","Dias, Pedro",307
-"Silva, Bruno","Silva, Bruno",308
-"Bovenzi, Antonio","Bovenzi, Antonio",309
-"Grottke, M.","Grottke, Michael",310
-"Grottke, Michael","Grottke, Michael",310
-"Melo, Matheus","Melo, Matheus",311
-"Araújo, Carlos","Araújo, Carlos",312
-"Li, Su","Li, Su",313
-"Yong, Qi","Yong, Qi",314
-"Li, Jinghui","Li, Jinghui",315
-"Wang, Yakun","Wang, Yakun",316
-"Barbierato, Enrico","Barbierato, Enrico",317
-"Bobbio, Andrea","Bobbio, Andrea",318
-"Gribaudo, Marco","Gribaudo, Marco",319
-"Iacono, Mauro","Iacono, Mauro",320
-"Costa, Bruno Evangelista","Costa, Bruno Evangelista",321
-"Chiba, Shigeru","Chiba, Shigeru",322
-"Yamakita, Kazuya","Yamakita, Kazuya",323
-"Kono, Kenji","Kono, Kenji",324
-"Hu, Hai","Hu, Hai",325
-"Yoshimura, Takeshi","Yoshimura, Takeshi",326
-"Woehrle, Matthias","Woehrle, Matthias",327
-"Meier, Andreas","Meier, Andreas",328
-"Langendoen, Koen","Langendoen, Koen",329
-"Carrozza, G.","Carrozza, G.",330
-"Pecchia, A.","Pecchia, A.",331
-"Salfner, F.","Salfner, F.",332
-"Sundararaman, Swaminathan","Sundararaman, Swaminathan",333
-"Subramanian, Sriram","Subramanian, Sriram",334
-"Rajimwale, Abhishek","Rajimwale, Abhishek",335
-"Arpaci-Dusseau, Andrea C.","Arpaci-Dusseau, Andrea C.",336
-"Arpaci-Dusseau, Remzi H.","Arpaci-Dusseau, Remzi H.",337
-"Swift, Michael M.","Swift, Michael M.",338
-Jun Guo,Jun Guo,339
-Weiyue Li,Weiyue Li,340
-Xinya Song,Xinya Song,341
-Bin Zhang,Bin Zhang,342
-Yunsheng Wang,Yunsheng Wang,343
-"Jiang, Letian","Jiang, Letian",344
-"Peng, Xiangyu","Peng, Xiangyu",345
-"Xu, Guozhi","Xu, Guozhi",346
-"Hanmer, Robert S.","Hanmer, Robert S.",347
-"Mendiratta, Veena B.","Mendiratta, Veena B.",348
-"Rezaei, Arash","Rezaei, Arash",349
-"Sharifi, Mohsen","Sharifi, Mohsen",350
-"Nikora, Allen P.","Nikora, Allen P.",351
-"Torres, Jordi","Torres, Jordi",352
-"Berral, Josep Ll.","Berral, Josep Ll.",353
-"Gavalda, Ricard","Gavalda, Ricard",354
-"Macêdo, Autran","Macêdo, Autran",355
-"Ferreira, Taís B.","Ferreira, Taís B.",356
-"Moreno, Marcio Ferreira","Moreno, Marcio Ferreira",357
-"Soares, Luiz Fernando Gomes","Soares, Luiz Fernando Gomes",358
-"Magalhães, João Paulo","Magalhães, João Paulo",359
-"Silva, L.","Silva, Luis Moura",360
-"Silva, Luis","Silva, Luis Moura",360
-"Silva, Luis Moura","Silva, Luis Moura",360
-"Beicker, Ibrahim","Beicker, Ibrahim",361
-"Leitão, Breno","Leitão, Breno",362
-"Chen, XiaoYong","Chen, XiaoYong",363
-"Reinecke, Philipp","Reinecke, Philipp",364
-"Gavaldà, Ricard","Gavaldà, Ricard",365
-"Myint, May Tar Hla","Myint, May Tar Hla",366
-"Thein, Thandar","Thein, Thandar",367
-"Du, Xiaozhi","Du, Xiaozhi",368
-"Chen, Ying","Chen, Ying",369
-"Zhong, Xiao","Zhong, Xiao",370
-"He, Xin","He, Xin",371
-"Wei, Wei","Wei, Wei",372
-"Gui, Xiaolin","Gui, Xiaolin",373
-"Eto, Hiroyuki","Eto, Hiroyuki",374
-"Ma, Jianhua","Ma, Jianhua",375
-"El-Shishiny, Hisham","El-Shishiny, Hisham",376
-"Deraz, Sally","Deraz, Sally",377
-"Bahy, Omar","Bahy, Omar",378
-"Chen, Xiu-E","Chen, Xiu-E",379
-"Zhao, Lei","Zhao, Lei",380
-"Zhao, Long","Zhao, Long",381
-"Song, QinBao","Song, QinBao",382
-"Zhu, Lei","Zhu, Lei",383
-"Cole, Robert G.","Cole, Robert G.",384
-"Weyuker, E.J.","Weyuker, Elaine J.",385
-"Weyuker, Elaine J.","Weyuker, Elaine J.",385
-"Shetty, Hitesh","Shetty, Hitesh",386
-"Nambiar, Manoj","Nambiar, Manoj",387
-"Kalita, Hemanta","Kalita, Hemanta",388
-"Rinsaka, Koichiro","Rinsaka, Koichiro",389
-"Wang, Dazhi","Wang, Dazhi",390
-Wei Xie,"Xie, Wei",391
-"Xie, Wei","Xie, Wei",391
-"Hoffmann, Guenther A.","Hoffmann, Guenther A.",392
-"Malek, Miroslaw","Malek, Miroslaw",393
-"Sundaram, Vinaitheerthan","Sundaram, Vinaitheerthan",394
-"HomChaudhuri, Sandip","HomChaudhuri, Sandip",395
-"Garg, S.","Garg, Sachin",396
-"Garg, Sachin","Garg, Sachin",396
-"Kintala, C.","Kintala, Chandra",397
-"Kintala, Chandra","Kintala, Chandra",397
-"Bagchi, Saurabh","Bagchi, Saurabh",398
-"Hiroyuki, Eto","Hiroyuki, Eto",399
-"Bondi, A.","Bondi, A.",400
-"Vaidyanathan, K.","Vaidyanathan, Kalyanaraman",401
-"Vaidyanathan, Kalyanaraman","Vaidyanathan, Kalyanaraman",401
-"Madeira, H.","Madeira, H.",402
-"Silva, J.G.","Silva, J.G.",403
-"F. Filho, Paulo","F. Filho, Paulo",404
-"Hong, Yiguang","Hong, Yiguang",405
-Yiguang Hong,"Hong, Yiguang",405
-"Bao, Y.",Yujuan Bao,406
-Yujuan Bao,Yujuan Bao,406
-"Sun, X.",Xiaobai Sun,407
-Xiaobai Sun,Xiaobai Sun,407
-"Tai, A.T.","Tai, A.T.",408
-"Tso, K.S.","Tso, K.S.",409
-"Sanders, W.H.","Sanders, W.H.",410
-"Chau, S.N.","Chau, S.N.",411
-"Candea, G.","Candea, G.",412
-"Kawamoto, Shinichi","Kawamoto, Shinichi",413
-"Fujiki, Yuichi","Fujiki, Yuichi",414
-"Friedman, Greg","Friedman, Greg",415
-"Fox, A.","Fox, A.",416
-"Ghoneim, Salma A.","Ghoneim, Salma A.",417
-"Shereshevsky, M.","Shereshevsky, M.",418
-"Crowell, J.","Crowell, J.",419
-"Cukic, B.","Cukic, B.",420
-"Gandikota, V.","Gandikota, V.",421
-Yan Liu,Yan Liu,422
-"Suzuki, H.","Suzuki, H.",423
-"Kaio, N.","Kaio, N.",424
-Lei Li,Lei Li,425
-"Cassidy, K.J.","Cassidy, K.J.",426
-"Gross, K.C.","Gross, K.C.",427
-"Malekpour, A.","Malekpour, A.",428
-"Kim, Sungsoo","Kim, Sungsoo",429
-"Selvamuthu, D.","Selvamuthu, D.",430
-Yun Liu,Yun Liu,431
-Yue Ma,Yue Ma,432
-"Han, J.J.","Han, J.J.",433
-"Levendel, H.","Levendel, H.",434
-"Miyahara, Satoshi","Miyahara, Satoshi",435
-"Harper, R. E.","Harper, Richard E.",436
-"Harper, Richard E.","Harper, Richard E.",436
-"Hunter, S. W.","Hunter, Steven W.",437
-"Hunter, Steven W.","Hunter, Steven W.",437
-"Fetzer, C.","Fetzer, C.",438
-"Hogstedt, K.","Hogstedt, K.",439
-"Danjou, T.","Danjou, T.",440
-"Sereno, Matteo","Sereno, Matteo",441
-"Anglano, Cosimo","Anglano, Cosimo",442
-"Yurcik, W.","Yurcik, W.",443
-"Doss, D.","Doss, D.",444
-"Castelli, V.","Castelli, V.",445
-"Heidelberger, P.","Heidelberger, P.",446
-"Zeggert, W. P.","Zeggert, W. P.",447
-"van Moorsel, A.","van Moorsel, A.",448
-"Telek, M.","Telek, M.",449
-"Alkalaj, L.","Alkalaj, L.",450
-"Hecht, H.","Hecht, H.",451
-"Huang, Y.","Huang, Yennun",452
-"Huang, Yennun","Huang, Yennun",452
-"Pfening, A.","Pfening, A.",453
-"Kolettis, N.","Kolettis, N.",454
-"Fulton, N.D.","Fulton, N.D.",455
+César Santos,César Santos,1
+Fumio Machida,Fumio Machida,2
+Ermeson Andrade,Ermeson C. Andrade,3
+Ermeson C. Andrade,Ermeson C. Andrade,3
+V. P. Koutras,Vasilis P. Koutras,4
+V.P. Koutras,Vasilis P. Koutras,4
+Vasilis P. Koutras,Vasilis P. Koutras,4
+A. N. Platis,Agapios N. Platis,5
+A.N. Platis,Agapios N. Platis,5
+Agapios N. Platis,Agapios N. Platis,5
+Wenjie Ding,Wenjie Ding,6
+Zhihao Liu,Zhihao Liu,7
+Xuhui Lu,Xuhui Lu,8
+Xiaoting Du,Xiaoting Du,9
+Zheng Zheng,Zheng Zheng,10
+Hongwei Tao,Hongwei Tao,11
+Han Liu,Han Liu,12
+Xiaoxu Niu,Xiaoxu Niu,13
+Licheng Ding,Licheng Ding,14
+Yixiang Chen,Yixiang Chen,15
+Qiaoling Cao,Qiaoling Cao,16
+Jing Bai,Jing Bai,17
+Xiaolin Chang,Xiaolin Chang,18
+K. S. Trivedi,"Trivedi, Kishor S.",19
+K. Trivedi,"Trivedi, Kishor S.",19
+K.S. Trivedi,"Trivedi, Kishor S.",19
+Kishor S. Trivedi,"Trivedi, Kishor S.",19
+Kishor Trivedi,"Trivedi, Kishor S.",19
+"Trivedi, Kishor S.","Trivedi, Kishor S.",19
+Yunzhe Tian,Yunzhe Tian,20
+Yike Li,Yike Li,21
+Kang Chen,Kang Chen,22
+Zhen-Yu Zhang,Zhenguo Zhang,23
+Zhenguo Zhang,Zhenguo Zhang,23
+Endong Tong,Endong Tong,24
+Jiqiang Liu,Jiqiang Liu,25
+Fangyun Qin,Fangyun Qin,26
+Wenjia Niu,Wenjia Niu,27
+A. Avritzer,Alberto Avritzer,28
+Alberto Avritzer,Alberto Avritzer,28
+Andrea Janes,Andrea Janes,29
+Andrea Marin,Andrea Marin,30
+Catia Trubiani,Catia Trubiani,31
+Andre van Hoorn,Andre van Hoorn,32
+Matteo Camilli,Matteo Camilli,33
+Daniel S. Menasché,Daniel S. Menasché,34
+A. Bondi,André B. Bondi,35
+André B. Bondi,André B. Bondi,35
+Luigi De Simone,Luigi De Simone,36
+Mario Di Mauro,Mario Di Mauro,37
+R. Natella,Roberto Natella,38
+Roberto Natella,Roberto Natella,38
+F. Postiglione,Fabio Postiglione,39
+Fabio Postiglione,Fabio Postiglione,39
+Laura Carnevali,Laura Carnevali,40
+Marco Paolieri,Marco Paolieri,41
+Riccardo Reali,Riccardo Reali,42
+Leonardo Scommegna,Leonardo Scommegna,43
+Enrico Vicario,Enrico Vicario,44
+Herderson Couto,Herderson Couto,45
+Gustavo Callou,Gustavo Callou,46
+Yueqi Jiang,Yueqi Jiang,47
+Jelena Mišić,Jelena Mišić,48
+Vojislav B. Mišić,Vojislav B. Mišić,49
+Yingying Yao,Yingying Yao,50
+Junchao Fan,Junchao Fan,51
+Bocheng Ju,Bocheng Ju,52
+Tuan Anh Nguyen,Tuan Anh Nguyen,53
+Damsub Lim,Damsub Lim,54
+Seunghyeop Nam,Seunghyeop Nam,55
+Dugki Min,Dugki Min,56
+Iure Fe,Iure Fe,57
+Francisco Airton Silva,Francisco Airton Silva,58
+"Maciel, Paulo",Paulo R. M. Maciel,59
+Paulo Maciel,Paulo R. M. Maciel,59
+Paulo R. M. Maciel,Paulo R. M. Maciel,59
+Paulo R.M. Maciel,Paulo R. M. Maciel,59
+Xueyong Tan,Xueyong Tan,60
+Jing Liu,Jing Liu,61
+L. De Simone,L. De Simone,62
+M. Di Mauro,M. Di Mauro,63
+M. Longo,M. Longo,64
+Kai Jia,Kai Jia,65
+Xiao Yu,Xiaohan Yu,66
+Xiaohan Yu,Xiaohan Yu,66
+Chen Zhang,Chen Zhang,67
+Wenzhi Xie,Wenzhi Xie,68
+Dongdong Zhao,Dongdong Zhao,69
+Jianwen Xiang,Jianwen Xiang,70
+Paulo Costa,Paulo Costa,71
+Edward Ordonez,Edward Ordonez,72
+"Araujo, Jean",Jean Teixeira de Araujo,73
+Jean Araujo,Jean Teixeira de Araujo,73
+Jean Teixeira de Araujo,Jean Teixeira de Araujo,73
+Maria Gizele Nascimento,Maria Gizele Nascimento,74
+Rafael José Moura,Rafael José Moura,75
+Huixia Huo,Huixia Huo,76
+Rui Hao,Rui Hao,77
+Wenhua Hu,Wenhua Hu,78
+D. Cotroneo,Domenico Cotroneo,79
+Domenico Cotroneo,Domenico Cotroneo,79
+Roberto Pietrantuono,Roberto Pietrantuono,80
+Nie Yuge,Nie Yuge,81
+Chen Yulei,Chen Yulei,82
+Jiang Yujia,Jiang Yujia,83
+Wu Huayao,Wu Huayao,84
+Yin Beibei,Yin Beibei,85
+Cai Kai-Yuan,Cai Kai-Yuan,86
+Haining Meng,Haining Meng,87
+Jiawei Zhang,Jiawei Zhang,88
+Yiming Liu,Yiming Liu,89
+Zhuanzhuan Liu,Zhuanzhuan Liu,90
+Marco Becattini,Marco Becattini,91
+Giovanni Fontani,Giovanni Fontani,92
+Leonardo Paroli,Leonardo Paroli,93
+James J. Cusick,James J. Cusick,94
+Kojiro Soeda,Kojiro Soeda,95
+Xiao Xiao,Xiao Xiao,96
+Nianqiu Wang,Nianqiu Wang,97
+Tommaso Botarelli,Tommaso Botarelli,98
+Takeru Wada,Takeru Wada,99
+Hiroshi Yamada,Hiroshi Yamada,100
+Kengo Watanabe,Kengo Watanabe,101
+Philip König,Philip König,102
+Fabian Obermann,Fabian Obermann,103
+Kevin Mallinger,Kevin Mallinger,104
+Alexander Schatten,Alexander Schatten,105
+Harguneet Kaur,Harguneet Kaur,106
+Arvinder Kaur,Arvinder Kaur,107
+Shruthi Parashivamurthy,Shruthi Parashivamurthy,108
+Nagaraj G Cholli,Nagaraj Girish Cholli,109
+Nagaraj Girish Cholli,Nagaraj Girish Cholli,109
+Fengdong Shi,Fengdong Shi,110
+Zhi Yuan,Zhi Yuan,111
+Min Wang,Min Wang,112
+Jun Cui,Jun Cui,113
+Ricardo J. Rodríguez,Ricardo J. Rodríguez,114
+Shupan Li,Shupan Li,115
+Xiaohui Wan,Xiaohui Wan,116
+Zhiping Shi,Zhiping Shi,117
+Lili Jiang,Lili Jiang,118
+Zhen Han,Zhen Han,119
+Yulei Sui,Yulei Sui,120
+Jun Ai,Jun Ai,121
+Yaru Li,Yaru Li,122
+Jackson Costa,Jackson Costa,123
+"Matos, Rubens","Matos, Rubens",124
+Rubens Matos,"Matos, Rubens",124
+Jueying Li,Jueying Li,125
+Eunmi Choi,Eunmi Choi,126
+Jae-Woo Lee,Jae-Woo Lee,127
+Lov Kumar,Lov Kumar,128
+Vikram Singh,Vikram Singh,129
+Lalita Bhanu Murthy,Lalita Bhanu Murthy,130
+Sanjay Misra,Sanjay Misra,131
+Aneesh Krishna,Aneesh Krishna,132
+Douglas Dias,Douglas Dias,133
+Junwei Zhou,Junwei Zhou,134
+Jing Tian,Jing Tian,135
+Shuo Feng,Shuo Feng,136
+Yulei Chen,Yulei Chen,137
+Yuge Nie,Yuge Nie,138
+Bei-Bei Yin,Bei-Bei Yin,139
+Beibei Yin,Bei-Bei Yin,139
+Huayao Wu,Huayao Wu,140
+Guoze Hao,Guoze Hao,141
+Lianchuan Ma,Lianchuan Ma,142
+Carlos Melo,Carlos Melo,143
+Felipe Oliveira,Felipe Oliveira,144
+Jamilson Dantas,Jamilson Dantas,145
+Paulo Pereira,Paulo Pereira,146
+Ronierison Maciel,Ronierison Maciel,147
+Lucas Vinícius,Lucas Vinícius,148
+Laécio Rodrigues,Laécio Rodrigues,149
+Matheus Torquato,Matheus Torquato,150
+S. Russo,Stefano Russo,151
+Stefano Russo,Stefano Russo,151
+Guanping Xiao,Guanping Xiao,152
+Zenghui Zhou,Zenghui Zhou,153
+Gao-Rong Ning,Gao-Rong Ning,154
+Gaorong Ning,Gao-Rong Ning,154
+Zhenjiang Zhang,Zhenjiang Zhang,155
+Jose Flora,Jose Flora,156
+Paulo Goncalves,Paulo Goncalves,157
+Miguel Teixeira,Miguel Teixeira,158
+Nuno Antunes,Nuno Antunes,159
+Eun-Tae Jang,Eun-Tae Jang,160
+Sung Hoon Baek,Sung Hoon Baek,161
+Ki-Woong Park,Ki-Woong Park,162
+Kiejin Park,Ki-Woong Park,162
+Felipe Battisti,Felipe Battisti,163
+Arnaldo Silva,Arnaldo Silva,164
+Luis Pereira,Luis Pereira,165
+Tiago Carvalho,Tiago Carvalho,166
+Yan Wang,Yanchao Wang,167
+Yan-Bin Wang,Yanchao Wang,167
+Yanchao Wang,Yanchao Wang,167
+Jiangyi Yao,Jiangyi Yao,168
+Xiongwei Li,Xiongwei Li,169
+Linyun Liu,Linyun Liu,170
+Jun Zhang,Jun Zhang,171
+Shuo Li,Shuo Li,172
+Pan He,Pan He,173
+Alessandro Fantechi,Alessandro Fantechi,174
+Gloria Gori,Gloria Gori,175
+Marco Papini,Marco Papini,176
+Leonardo Miranda,Leonardo Miranda,177
+Cabral Lima,Cabral Lima,178
+Daniel Sadoc Menasch,Daniel Sadoc Menasch,179
+Guilherme Domingues,Guilherme Domingues,180
+Yancai Zhou,Yancai Zhou,181
+Yang Zheng,Yang Zheng,182
+Zheng Hu,Zheng Hu,183
+Yanming Miao,Yanming Miao,184
+Marco Vieira,Marco Vieira,185
+Zahra RAHMANI GHOBADI,Zahra RAHMANI GHOBADI,186
+Hassan RASHIDI,Hassan RASHIDI,187
+Junjun Zheng,Junjun Zheng,188
+H. Okamura,Hiroyuki Okamura,189
+Hiroyuki Okamura,Hiroyuki Okamura,189
+T. Dohi,Tadashi Dohi,190
+Tadashi Dohi,Tadashi Dohi,190
+Yongquan Yan,Yongquan Yan,191
+Yanjun Li,Yanjun Li,192
+Bin Cheng,Bin Cheng,193
+Nasraldeen Alnor Adam Khleel,Nasraldeen Alnor Adam Khleel,194
+Károly Nehéz,Károly Nehéz,195
+Shruthi P,Shruthi P,196
+Yuekai Shi,Yuekai Shi,197
+Yilin Qu,Yilin Qu,198
+Junhuai Li,Junhuai Li,199
+Jianjun Liu,Jianjun Liu,200
+Satyendra Singh Chouhan,Satyendra Singh Chouhan,201
+Santosh Singh Rathore,Santosh Singh Rathore,202
+Besmir Tola,Besmir Tola,203
+Yuming Jiang,Yuming Jiang,204
+Bjarne E. Helvik,Bjarne E. Helvik,205
+Petra Vizarreta,Petra Vizarreta,206
+Christian Sieber,Christian Sieber,207
+Andreas Blenk,Andreas Blenk,208
+Amaury Van Bemten,Amaury Van Bemten,209
+Vinod Ramachandra,Vinod Ramachandra,210
+Wolfgang Kellerer,Wolfgang Kellerer,211
+Carmen Mas-Machuca,Carmen Mas-Machuca,212
+Mengting Liang,Mengting Liang,213
+Dimeng Li,Dimeng Li,214
+Bin Xu,Bin Xu,215
+Lukas Beierlieb,Lukas Beierlieb,216
+Lukas Ifflander,Lukas Ifflander,217
+Aleksandar Milenkoski,Aleksandar Milenkoski,218
+Samuel Kounev,Samuel Kounev,219
+Jacopo Parri,Jacopo Parri,220
+Samuele Sampietro,Samuele Sampietro,221
+Ricardo M. Czekster,Ricardo M. Czekster,222
+Daniel Sadoc Menasche,Daniel Sadoc Menasche,223
+Vitaliy Yakovyna,Vitaliy Yakovyna,224
+Bohdan Uhrynovskyi,Bohdan Uhrynovskyi,225
+Mingxi Li,Mingxi Li,226
+Megha Khanna,Megha Khanna,227
+Mehak Aggarwal,Mehak Aggarwal,228
+Naman Singhal,Naman Singhal,229
+Zhuoqian Chen,Zhuoqian Chen,230
+Houbao Xu,Houbao Xu,231
+Kimia REZAEI KALANTARI,Kimia REZAEI KALANTARI,232
+Ali EBRAHIMNEJAD,Ali EBRAHIMNEJAD,233
+Homayun MOTAMENI,Homayun MOTAMENI,234
+Xiaoxue Wu,Xiaoxue Wu,235
+Wei Zheng,Wei Zheng,236
+Minchao Pu,Minchao Pu,237
+Jie Chen,Jie Chen,238
+Dejun Mu,Dejun Mu,239
+Gregory Levitin,Gregory Levitin,240
+Liudong Xing,Liudong Xing,241
+Yanping Xiang,Yanping Xiang,242
+"Tianjin Key Laboratory for Advanced Signal Processing, Civil Aviation University of China, Tianjin 300300, China","Tianjin Key Laboratory for Advanced Signal Processing, Civil Aviation University of China, Tianjin 300300, China",243
+Yun-Fei Jia,Yun-Fei Jia,244
+Yunfei JIA,Yun-Fei Jia,244
+Jingwei Li,Jingwei Li,245
+Yong Qi,Yong Qi,246
+Guanghua Wang,Guanghua Wang,247
+Jinwei Lin,Jinwei Lin,248
+Shuguang Wang,Shuguang Wang,249
+Minyan Lu,Minyan Lu,250
+Shiyi Kong,Shiyi Kong,251
+Antonio Ken Iannillo,Antonio Ken Iannillo,252
+Jing Yue,Jing Yue,253
+Xiaojun Wu,Xiaojun Wu,254
+Yunqing Xue,Yunqing Xue,255
+Minghao Tang,Minghao Tang,256
+Peng Zhang,Peng Zhang,257
+Haoqi Sun,Haoqi Sun,258
+Lei Zhang,Lei Zhang,259
+Luan Lins,Luan Lins,260
+Andre Rodrigues,Andre Rodrigues,261
+Aye Myat Myat Paing,Aye Myat Myat Paing,262
+Sihang Wang,Sihang Wang,263
+Qinchen Liu,Qinchen Liu,264
+Jian Wang,Jian Wang,265
+Zeming Hao,Zeming Hao,266
+Caisheng Weng,Caisheng Weng,267
+Artur Andrzejak,Artur Andrzejak,268
+Shengwu Xiong,Shengwu Xiong,269
+L. Li,Lingling Li,270
+Lin Li,Lingling Li,270
+Lingling Li,Lingling Li,270
+Hong-Zhong Huang,Hong-Zhong Huang,271
+Liang Luo,Liang Luo,272
+Chinmay Hota,Chinmay Hota,273
+Lalita Bhanu Murthy Neti,Lalita Bhanu Murthy Neti,274
+Yu Qiao,Yu Qiao,275
+Yunyu Fang,Yunyu Fang,276
+K-Y Cai,Kai-Yuan Cai,277
+Kai-Yuan Cai,Kai-Yuan Cai,277
+Kaiyuan Cai,Kai-Yuan Cai,277
+Lingze Meng,Lingze Meng,278
+Neelamadhab Padhy,Neelamadhab Padhy,279
+Rasmita Panigrahi,Rasmita Panigrahi,280
+K. Neeraja,K. Neeraja,281
+Richa Sharma,Richa Sharma,282
+Gireesh Kumar,Gireesh Kumar,283
+Erico Guedes,Erico Guedes,284
+Thet Thet Win,Thet Thet Win,285
+Hanoch Ben-Haim,Hanoch Ben-Haim,286
+Shubham Sharma,Shubham Sharma,287
+Sandeep Kumar,Sandeep Kumar,288
+Ashish Sureka,Ashish Sureka,289
+I M Umesh,I. M. Umesh,290
+I. M. Umesh,I. M. Umesh,290
+Ping Guo,Ping Guo,291
+Zhigao Zheng,Zhigao Zheng,292
+Massimo Ficco,Massimo Ficco,293
+Shouyu Huo,Shouyu Huo,294
+Xing Liu,Xing Liu,295
+Yi Zhong,Yingshou Zhong,296
+Yingshou Zhong,Yingshou Zhong,296
+Haiguo Yu,Haiguo Yu,297
+Lin Cai,Lin Cai,298
+Artur Andrzejakb,Artur Andrzejakb,299
+Nuno Preguica,Nuno Preguica,300
+Naoto Miyoshi,Naoto Miyoshi,301
+Koichiro Rinsaka,Koichiro Rinsaka,302
+G N Srinivasan,G N Srinivasan,303
+Kumiko Tadano,Kumiko Tadano,304
+Yoshiharu Maeno,Yoshiharu Maeno,305
+Xiayu Hua,Xiayu Hua,306
+Chunhui Guo,Chunhui Guo,307
+Hao Wu,Hao Wu,308
+Douglas Lautner,Douglas Lautner,309
+Shangping Ren,Shangping Ren,310
+Jean Rahme,Jean Rahme,311
+Haiping Xu,Haiping Xu,312
+Harish Sukhwani,Harish Sukhwani,313
+"Jr., Rivalino Matias","Jr., Rivalino Matias",314
+R. Matias,"Jr., Rivalino Matias",314
+Rivalino Matias,"Jr., Rivalino Matias",314
+Rivalino Matias Jr.,"Jr., Rivalino Matias",314
+Andy Rindos,Andy Rindos,315
+Yuto Jumonji,Yuto Jumonji,316
+Liping Lu,Liping Lu,317
+Chunhui Yang,Chunhui Yang,318
+Dong Li,Dong Li,319
+Shiqing Jia,Shiqing Jia,320
+Chunyan Hou,Chunyan Hou,321
+Jinsong Wang,Jinsong Wang,322
+Xiaodan Li,Xiaodan Li,323
+Huihong He,Huihong He,324
+Qiang Wang,Qiang Wang,325
+Hong Zhang,Hong Zhang,326
+Xu Zhang,Xu Zhang,327
+Lei Zhu,Lei Zhu,328
+Lei Wang,Lei Wang,329
+Zijiang Yang,Zijiang Yang,330
+Jing Zhao,Jing Zhao,331
+Yunlong Lou,Yunlong Lou,332
+J. Alonso,Javier Alonso,333
+Javier Alonso,Javier Alonso,333
+Pengfei Chen,Pengfei Chen,334
+Xinyi Li,Xinyi Li,335
+Di Hou,Di Hou,336
+Michael Lyu,Michael R. Lyu,337
+Michael R. Lyu,Michael R. Lyu,337
+Jian-Feng Zhao,Jian-Feng Zhao,338
+Mohamed Escheikh,Mohamed Escheikh,339
+Zayneb Tayachi,Zayneb Tayachi,340
+Kamel Barkaoui,Kamel Barkaoui,341
+Guilherme O. de Sena,Guilherme O. de Sena,342
+Xiaolin Changa,Xiaolin Changa,343
+Chen Chen,Chen Chen,344
+Kai Shi,Kai Shi,345
+Francesco Fucci,Francesco Fucci,346
+Vidhyashree Nagaraju,Vidhyashree Nagaraju,347
+Veeresh Varad Basavaraj,Veeresh Varad Basavaraj,348
+Lance Fiondella,Lance Fiondella,349
+Xinhong Hei,Xinhong Hei,350
+K. Kourai,Kenichi Kourai,351
+Kenichi Kourai,Kenichi Kourai,351
+Hiroki Ooba,Hiroki Ooba,352
+Moona Yakhchi,Moona Yakhchi,353
+Mahdi Fazeli,Mahdi Fazeli,354
+Amir Akhavan Bitaraf,Amir Akhavan Bitaraf,355
+Ahmad Patooqhy,Ahmad Patooqhy,356
+Madhu Jain,Madhu Jain,357
+N.A. Preeti,N.A. Preeti,358
+Jungang GUAN,Jungang GUAN,359
+Chao LUO,Chao LUO,360
+Huaming Wu,Huaming Wu,361
+K. Wolter,Katinka Wolter,362
+Katinka Wolter,Katinka Wolter,362
+Biju R Mohan,Biju R Mohan,363
+G Ram Mohana Reddy,G Ram Mohana Reddy,364
+Jiantao Zhou,Jiantao Zhou,365
+Rajkumar Buyya,Rajkumar Buyya,366
+Yang Zhao,Yang Zhao,367
+Yiqing Wu,Yiqing Wu,368
+Jinghe An,Jinghe An,369
+Sen Wang,Sen Wang,370
+S. Malefaki,Sonia Malefaki,371
+Sonia Malefaki,Sonia Malefaki,371
+Jiulong Zhang,Jiulong Zhang,372
+Liansheng Sui,Liansheng Sui,373
+K. Yamamoto,K. Yamamoto,374
+Jian Xu,Jian Xu,375
+Xuefeng Li,Xuefeng Li,376
+Hui Xu,Hui Xu,377
+Ren-Biao Wu,Ren-Biao Wu,378
+Pengfei Zheng,Pengfei Zheng,379
+Yangfan Zhou,Yangfan Zhou,380
+Jianfeng Zhan,Jianfeng Zhan,381
+M. Grottke,Michael Grottke,382
+Michael Grottke,Michael Grottke,382
+Yanbin Wang,Yanbin Wang,383
+Menghui Yang,Menghui Yang,384
+Geyong Min,Geyong Min,385
+Weikang Yang,Weikang Yang,386
+Zituo Li,Zituo Li,387
+Yuliang Jin,Yuliang Jin,388
+"Alves, Vandi","Alves, Vandi",389
+Vandi Alves,"Alves, Vandi",389
+"Souza, F. Vieira de","Souza, F. Vieira de",390
+Victor F. Nicola,Victor F. Nicola,391
+Chapram Sudhakar,Chapram Sudhakar,392
+Ishan Shah,Ishan Shah,393
+T. Ramesh,T. Ramesh,394
+Wang-wen Wu,Wang-wen Wu,395
+Chao-yi Ma,Chao-yi Ma,396
+Cheng-Hong Wang,Cheng-Hong Wang,397
+Qiushi Wang,Qiushi Wang,398
+Lifeng Liu,Lifeng Liu,399
+Diego Elias,Diego Elias,400
+Felipe Alencar,Felipe Alencar,401
+Marcelo Santos,Marcelo Santos,402
+Matheus Santana,Matheus Santana,403
+Stenio Fernandes,Stenio Fernandes,404
+Dong Seong Kim,Dong Seong Kim,405
+Dong-Seong Kim,Dong Seong Kim,405
+Benjamin Schleich,Benjamin Schleich,406
+E. Vicente,Elder Vicente,407
+Elder Vicente,Elder Vicente,407
+A. Maria,A. Maria,408
+Meng Haining,Meng Haining,409
+Hei Xinhong,Hei Xinhong,410
+Liu Jianjun,Liu Jianjun,411
+Dario Bruneo,Dario Bruneo,412
+Salvatore Distefano,Salvatore Distefano,413
+Francesco Longo,Francesco Longo,414
+A. Puliafito,Antonio Puliafito,415
+Antonio Puliafito,Antonio Puliafito,415
+Marco Scarpa,Marco Scarpa,416
+R. Agepati,R. Agepati,417
+N. Gundala,N. Gundala,418
+S. V. Amari,S. V. Amari,419
+Langner Felix,Langner Felix,420
+Andrzejak Artur,Andrzejak Artur,421
+Stefano Ballerini,Stefano Ballerini,422
+Flavio Frattini,Flavio Frattini,423
+Matheus Melo,Matheus Melo,424
+Julian Menezes,Julian Menezes,425
+Danilo Oliveira,Danilo Oliveira,426
+Pedro Dias,Pedro Dias,427
+Bruno Silva,Bruno Silva,428
+Antonio Bovenzi,Antonio Bovenzi,429
+Felix Langner,Felix Langner,430
+Carlos Araujo,Carlos Araujo,431
+G. A. Gravvanis,G. A. Gravvanis,432
+Su Li,Su Li,433
+Qi Yong,Qi Yong,434
+Enrico Barbierato,Enrico Barbierato,435
+A. Bobbio,Andrea Bobbio,436
+Andrea Bobbio,Andrea Bobbio,436
+M. Gribaudo,Marco Gribaudo,437
+Marco Gribaudo,Marco Gribaudo,437
+Mauro Iacono,Mauro Iacono,438
+Bruno Evangelista Costa,Bruno Evangelista Costa,439
+Autran Macedo,Autran Macedo,440
+Lei Cui,Lei Cui,441
+Bo Li,Bo Li,442
+Jianxin Li,Jianxin Li,443
+James Hardy,James Hardy,444
+Lu Liu,Lu Liu,445
+Salvatore Orlando,Salvatore Orlando,446
+Hao Ran Li,Hao Ran Li,447
+Jun Guo,Jun Guo,448
+Wei Yue Li,Wei Yue Li,449
+Weiyue Li,Wei Yue Li,449
+Bin Zhang,Bin Zhang,450
+Yun Sheng Wang,Yun Sheng Wang,451
+Yunsheng Wang,Yun Sheng Wang,451
+S. Chiba,S. Chiba,452
+Sudhanshu Shekhar Jha,Sudhanshu Shekhar Jha,453
+Adrian Jonel Krdu,Adrian Jonel Krdu,454
+Miroslaw Malek,Miroslaw Malek,455
+Kazuya Yamakita,Kazuya Yamakita,456
+Kenji Kono,Kenji Kono,457
+Francisco Vieira,Francisco Vieira,458
+Hai Hu,Hai Hu,459
+Takeshi Yoshimura,Takeshi Yoshimura,460
+Ana M. Carvalho,Ana M. Carvalho,461
+Inigo Goiri,Inigo Goiri,462
+Jordi Guitart,Jordi Guitart,463
+Ricard Gavalda,Ricard Gavalda,464
+Jordi Torres,Jordi Torres,465
+Matthias Woehrle,Matthias Woehrle,466
+Andreas Meier,Andreas Meier,467
+Koen Langendoen,Koen Langendoen,468
+Robert G. Cole,Robert G. Cole,469
+E.J. Weyuker,Elaine J. Weyuker,470
+Elaine J. Weyuker,Elaine J. Weyuker,470
+G. Carrozza,G. Carrozza,471
+A. Pecchia,A. Pecchia,472
+F. Salfner,Felix Salfner,473
+Felix Salfner,Felix Salfner,473
+P.A. Barbetta,P.A. Barbetta,474
+P.J.F. Filho,P.J.F. Filho,475
+Ying Ju,Ying Ju,476
+Swaminathan Sundararaman,Swaminathan Sundararaman,477
+Sriram Subramanian,Sriram Subramanian,478
+Abhishek Rajimwale,Abhishek Rajimwale,479
+Andrea C. Arpaci-Dusseau,Andrea C. Arpaci-Dusseau,480
+Remzi H. Arpaci-Dusseau,Remzi H. Arpaci-Dusseau,481
+Michael M. Swift,Michael M. Swift,482
+Xinya Song,Xinya Song,483
+Letian Jiang,Letian Jiang,484
+Xiangyu Peng,Xiangyu Peng,485
+Guozhi Xu,Guozhi Xu,486
+Wen-Bin Xu,Wen-Bin Xu,487
+Robert S. Hanmer,Robert S. Hanmer,488
+Veena B. Mendiratta,Veena B. Mendiratta,489
+Xiaofeng Lei,Xiaofeng Lei,490
+Kexian Xue,Kexian Xue,491
+Arash Rezaei,Arash Rezaei,492
+Mohsen Sharifi,Mohsen Sharifi,493
+Allen P. Nikora,Allen P. Nikora,494
+Josep Ll. Berral,Josep Ll. Berral,495
+Tais B. Ferreira,Tais B. Ferreira,496
+Marcio Ferreira Moreno,Marcio Ferreira Moreno,497
+Luiz Fernando Gomes Soares,Luiz Fernando Gomes Soares,498
+Joao Paulo Magalhaes,Joao Paulo Magalhaes,499
+Luis Moura Silva,Luis Moura Silva,500
+Luis Silva,Luis Moura Silva,500
+Ibrahim Beicker,Ibrahim Beicker,501
+Breno Leitao,Breno Leitao,502
+XiaoYong Chen,XiaoYong Chen,503
+Philipp Reinecke,Philipp Reinecke,504
+May Tar Hla Myint,May Tar Hla Myint,505
+Thandar Thein,Thandar Thein,506
+Wei Xie,Wei Xie,507
+Yiguang Hong,Yiguang Hong,508
+C. Kintala,Chandra M. Kintala,509
+Chandra Kintala,Chandra M. Kintala,509
+Chandra M. Kintala,Chandra M. Kintala,509
+Xiaozhi Du,Xiaozhi Du,510
+Ying Chen,Ying Chen,511
+Xiao Zhong,Xiao Zhong,512
+K. IWAMOTO,Kazuki Iwamoto,513
+Kazuki Iwamoto,Kazuki Iwamoto,513
+N. KAIO,NAOTO KAIO,514
+NAOTO KAIO,NAOTO KAIO,514
+Xiu-E Chen,Xiu-E Chen,515
+Lei Zhao,Lei Zhao,516
+Xin He,Xin He,517
+Wei Wei,Wei Wei,518
+Xiaolin Gui,Xiaolin Gui,519
+Long Zhao,Long Zhao,520
+QinBao Song,QinBao Song,521
+Hitesh Shetty,Hitesh Shetty,522
+Manoj Nambiar,Manoj Nambiar,523
+Hemanta Kalita,Hemanta Kalita,524
+Dazhi Wang,Dazhi Wang,525
+Hou Di,Hou Di,526
+Chen Ying,Chen Ying,527
+Guenther A. Hoffmann,Guenther A. Hoffmann,528
+Vinaitheerthan Sundaram,Vinaitheerthan Sundaram,529
+Sandip HomChaudhuri,Sandip HomChaudhuri,530
+S. Garg,Sachin Garg,531
+Sachin Garg,Sachin Garg,531
+Saurabh Bagchi,Saurabh Bagchi,532
+Zhao Tianhai,Zhao Tianhai,533
+Shen Junyi,Shen Junyi,534
+Zheng Xiaomel,Zheng Xiaomel,535
+Liu Liang,Liu Liang,536
+Hiroyuki Eto,Hiroyuki Eto,537
+K. Vaidyanathan,Kalyanaraman Vaidyanathan,538
+Kalyanaraman Vaidyanathan,Kalyanaraman Vaidyanathan,538
+Henrique Madeira Luis Silva,Henrique Madeira Luis Silva,539
+Paulo F. Filho,Paulo F. Filho,540
+Y. Bao,Yujuan Bao,541
+Yujuan Bao,Yujuan Bao,541
+X. Sun,Xiaobai Sun,542
+Xiaobai Sun,Xiaobai Sun,542
+A.T. Tai,A.T. Tai,543
+K.S. Tso,K.S. Tso,544
+W.H. Sanders,W.H. Sanders,545
+S.N. Chau,S.N. Chau,546
+T. Danjou,TAKASHI DANJOU,547
+TAKASHI DANJOU,TAKASHI DANJOU,547
+SHUNJI OSAKI,SHUNJI OSAKI,548
+Salma A. Ghoneim,Salma A. Ghoneim,549
+Hossam M. A. Fahmy,Hossam M. A. Fahmy,550
+M. Shereshevsky,M. Shereshevsky,551
+J. Crowell,J. Crowell,552
+B. Cukic,B. Cukic,553
+V. Gandikota,V. Gandikota,554
+Yan Liu,Yan Liu,555
+H. Suzuki,H. Suzuki,556
+Lei Li,Lei Li,557
+K.J. Cassidy,K.J. Cassidy,558
+K.C. Gross,K.C. Gross,559
+A. Malekpour,A. Malekpour,560
+Sungsoo Kim,Sungsoo Kim,561
+D. Selvamuthu,D. Selvamuthu,562
+Yun Liu,Yun Liu,563
+Yue Ma,Yue Ma,564
+J.J. Han,J.J. Han,565
+H. Levendel,H. Levendel,566
+S. Miyahara,S. Miyahara,567
+R. E. Harper,Richard E. Harper,568
+Richard E. Harper,Richard E. Harper,568
+S. W. Hunter,Steven W. Hunter,569
+Steven W. Hunter,Steven W. Hunter,569
+C. Fetzer,C. Fetzer,570
+K. Hogstedt,K. Hogstedt,571
+M. Sereno,Matteo Sereno,572
+Matteo Sereno,Matteo Sereno,572
+Cosimo Anglano,Cosimo Anglano,573
+W. Yurcik,W. Yurcik,574
+D. Doss,D. Doss,575
+V. Castelli,V. Castelli,576
+P. Heidelberger,P. Heidelberger,577
+W. P. Zeggert,W. P. Zeggert,578
+A. Horvath,A. Horvath,579
+M. Telek,Miklós Telek,580
+Miklós Telek,Miklós Telek,580
+A. van Moorsel,A. van Moorsel,581
+L. Alkalaj,L. Alkalaj,582
+H. Hecht,H. Hecht,583
+Y. Huang,Yennun Huang,584
+Yennun Huang,Yennun Huang,584
+András Pfening,András Pfening,585
+N. Kolettis,N. Kolettis,586
+N.D. Fulton,N.D. Fulton,587
