@@ -119,10 +119,14 @@ class Generator:
         elif 'other' in tags_lower:
           field_counts['Other Mitigation Methods (OTM)'] += 1
           matched = True
+        elif 'classification' in tags_lower or '分析bug报告' in tags_lower:
+          field_counts['Understanding (UND)'] += 1
+          matched = True
         
         # If no specific match found, classify as 'Other'
         if not matched:
           field_counts['Other'] += 1
+          print(f'[DEBUG] Unclassified tags: "{tags_str}"')
     else:
       # If repo_analysis_tags column doesn't exist, default to 'Other'
       field_counts['Other'] = len(df)
