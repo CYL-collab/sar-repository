@@ -10,7 +10,7 @@ var myBarChart = new Chart(barChart, {
         label: "# Publications",
         backgroundColor: "rgb(23, 125, 255)",
         borderColor: "rgb(23, 125, 255)",
-        data: [16, 22, 26, 27, 31, 39, 46, 57, 61, 91, 107, 121, 141, 160, 174, 189, 208, 220, 240, 264, 289, 312, 334, 350, 363, 364]
+        data: [16, 22, 26, 27, 31, 39, 46, 57, 61, 90, 106, 120, 140, 159, 173, 188, 206, 217, 237, 261, 286, 309, 331, 347, 360, 361]
       },
     ],
   },
@@ -44,11 +44,11 @@ var myPieChart = new Chart(pieChart, {
   data: {
     datasets: [
       {
-        data: [129, 64, 56, 33, 26, 25, 14, 12, 5],
+        data: [226, 55, 25, 24, 14, 12, 5, 0],
         borderWidth: 0,
       },
     ],
-    labels: ["Model-based Analysis", "Measurement-based Analysis", "Indicator", "Hybrid Analysis", "Rejuvenation", "ARB Prediction", "Other", "Testing", "Other Mitigation"]
+    labels: ["Aging process analysis (ANA)", "Measurement (MEA)", "Prediction (PRE)", "Rejuvenation (REJ)", "Other", "Testing (TES)", "Other Mitigation Methods (OTM)", "Understanding (UND)"]
   },
   options: {
     responsive: true,

@@ -76,15 +76,13 @@ class Generator:
 
     # distribution of topics - dynamic classification based on repo_analysis_tags
     field_counts = {
-      'Model-based Analysis': 0,
-      'Measurement-based Analysis': 0,
-      'Hybrid Analysis': 0,
-      'Indicator': 0,
-      'Rejuvenation': 0,
-      'ARB Prediction': 0,
-      # 'Classification': 0,
-      'Testing': 0,
-      'Other Mitigation': 0,
+      'Understanding (UND)': 0,
+      'Measurement (MEA)': 0,
+      'Testing (TES)': 0,
+      'Aging process analysis (ANA)': 0,
+      'Rejuvenation (REJ)': 0,
+      'Prediction (PRE)': 0,
+      'Other Mitigation Methods (OTM)': 0,
       'Other': 0
     }
     
@@ -98,28 +96,28 @@ class Generator:
         
         # Classification rules (in order of priority)
         if '度量' in tags_lower:
-          field_counts['Indicator'] += 1
+          field_counts['Measurement (MEA)'] += 1
           matched = True
         elif 'model' in tags_lower:
-          field_counts['Model-based Analysis'] += 1
+          field_counts['Aging process analysis (ANA)'] += 1
           matched = True
         elif 'measurement' in tags_lower:
-          field_counts['Measurement-based Analysis'] += 1
+          field_counts['Aging process analysis (ANA)'] += 1
           matched = True
         elif 'hybrid' in tags_lower:
-          field_counts['Hybrid Analysis'] += 1
+          field_counts['Aging process analysis (ANA)'] += 1
           matched = True
         elif 'arb prediction' in tags_lower or 'arb' in tags_lower:
-          field_counts['ARB Prediction'] += 1
+          field_counts['Prediction (PRE)'] += 1
           matched = True
         elif 'rej' in tags_lower:
-          field_counts['Rejuvenation'] += 1
+          field_counts['Rejuvenation (REJ)'] += 1
           matched = True
         elif 'testing' in tags_lower:
-          field_counts['Testing'] += 1
+          field_counts['Testing (TES)'] += 1
           matched = True
         elif 'other' in tags_lower:
-          field_counts['Other Mitigation'] += 1
+          field_counts['Other Mitigation Methods (OTM)'] += 1
           matched = True
         
         # If no specific match found, classify as 'Other'
