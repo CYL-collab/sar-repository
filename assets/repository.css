@@ -18,3 +18,9 @@
   min-height: 420px;
   position: relative; 
 }
+
+/* Custom badge for Understanding (UND) to avoid color collision */
+.badge-und {
+  background-color: #db5a6b; 
+  color: #fff !important;
+}

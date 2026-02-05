@@ -26,6 +26,8 @@ class Paper:
     self.no = get('no', 'number', 'issue', default='')
     self.pages = get('pages', default='')
     self.doi = get('doi', default='')
+    # Add support for repo_analysis_tags field
+    self.repo_analysis_tags = get('repo_analysis_tags', default='')
   
   def __str__(self) -> str:
     return "{}\n{}\n{}\n".format(self.author, self.title, self.venue_str())

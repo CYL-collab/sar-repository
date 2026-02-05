@@ -144,6 +144,47 @@
                     <h4 class="card-title">Basic</h4>
                   </div-->
                   <div class="card-body">
+                    <div class="row mb-3">
+                      <div class="col-md-3">
+                        <label class="form-label" for="tagFilter">Filter by Tag:</label>
+                        <select class="form-select" id="tagFilter">
+                          <option value="">All Tags</option>
+                          <option value="measurement">Measurement (MEA)</option>
+                          <option value="analysis">Aging process analysis (ANA)</option>
+                          <option value="prediction">Prediction (PRE)</option>
+                          <option value="rejuvenation">Rejuvenation (REJ)</option>
+                          <option value="testing">Testing (TES)</option>
+                          <option value="other-mitigation">Other Mitigation Methods (OTM)</option>
+                          <option value="understanding">Understanding (UND)</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      <div class="col-md-3">
+                        <label class="form-label" for="yearFilter">Filter by Year:</label>
+                        <select class="form-select" id="yearFilter">
+                          <option value="">All Years</option>
+                        </select>
+                      </div>
+                      <div class="col-md-3">
+                        <label class="form-label" for="searchInput">Search:</label>
+                        <input class="form-control" id="searchInput" placeholder="Search titles, authors..." type="text"/>
+                      </div>
+                      <div class="col-md-3">
+                        <label class="form-label" for="showAllResults">Display:</label>
+                        <select class="form-select" id="showAllResults">
+                          <option value="paged">Paged View (25 per page)</option>
+                          <option value="all">Show All Results</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mb-2">
+                      <div class="col-md-12">
+                        <div id="filterResults" class="text-muted">
+                          <span id="filteredCount">XX</span> papers found
+                          <span id="totalCount" style="display:none"> (out of XX total)</span>
+                        </div>
+                      </div>
+                    </div>
                     <div class="table-responsive">
                       <table id="basic-datatables" class="display table">
                         <thead>
@@ -203,6 +244,127 @@
    
     <script>
       $(document).ready(function () {
+        // Store all rows data for filtering
+        var allRowsData = [];
+        var years = {};
+        
+        // Collect all data and years after table is populated
+        function initializeFilters() {
+          allRowsData = [];
+          years = {};
+          
+          $('#basic-datatables tbody tr').each(function() {
+            var $row = $(this);
+            var rowData = {
+              element: $row.clone(),
+              tag: $row.data('tag'),
+              year: $row.data('year'),
+              text: $row.text().toLowerCase()
+            };
+            allRowsData.push(rowData);
+            
+            var year = $row.data('year');
+            if (year) years[year] = true;
+          });
+          
+          // Populate year filter
+          $('#yearFilter option:not(:first)').remove();
+          var sortedYears = Object.keys(years).sort((a, b) => b - a);
+          sortedYears.forEach(function(year) {
+            $('#yearFilter').append('<option value="' + year + '">' + year + '</option>');
+          });
+          
+          // Initialize result counts
+          $('#filteredCount').text(allRowsData.length);
+        }
+        
+        // Filter function - operates on all data
+        function applyFilters() {
+          var tagFilter = $('#tagFilter').val();
+          var yearFilter = $('#yearFilter').val();
+          var searchTerm = $('#searchInput').val().toLowerCase();
+          var showAllResults = $('#showAllResults').val() === 'all';
+          
+          // Filter and re-populate table (build list first)
+          var filteredData = [];
+          allRowsData.forEach(function(rowData) {
+            var show = true;
+
+            // Tag filter
+            if (tagFilter && rowData.tag !== tagFilter) {
+              show = false;
+            }
+
+            // Year filter
+            if (yearFilter && rowData.year.toString() !== yearFilter) {
+              show = false;
+            }
+
+            // Search filter
+            if (searchTerm && !rowData.text.includes(searchTerm)) {
+              show = false;
+            }
+
+            if (show) {
+              filteredData.push(rowData);
+            }
+          });
+
+          // Update result counts
+          $('#filteredCount').text(filteredData.length);
+          if (filteredData.length !== allRowsData.length) {
+            $('#totalCount').show().html(' (out of ' + allRowsData.length + ' total)');
+          } else {
+            $('#totalCount').hide();
+          }
+
+          // Destroy existing DataTable first to avoid restoring original rows
+          if ($.fn.DataTable.isDataTable('#basic-datatables')) {
+            $('#basic-datatables').DataTable().destroy();
+          }
+
+          // Clear tbody and append filtered rows
+          $('#basic-datatables tbody').empty();
+          filteredData.forEach(function(rowData) {
+            $('#basic-datatables tbody').append(rowData.element.clone());
+          });
+
+          // Configure DataTable based on display option
+          var dataTableConfig = {
+            order: [[0, 'desc']],
+            rowReorder: true,
+            columnDefs: [
+              { orderable: true, className: 'reorder', targets: 0 },
+              { orderable: false, targets: '_all' }
+            ],
+            searching: false,
+            info: true
+          };
+          
+          if (showAllResults) {
+            // Show all results without pagination
+            dataTableConfig.paging = false;
+            dataTableConfig.language = {
+              info: 'Showing all _TOTAL_ entries'
+            };
+          } else {
+            // Show with pagination
+            dataTableConfig.pageLength = 25;
+            dataTableConfig.paging = true;
+            dataTableConfig.language = {
+              info: 'Showing _START_ to _END_ of _TOTAL_ entries'
+            };
+          }
+          
+          // Reinitialize DataTable
+          $("#basic-datatables").DataTable(dataTableConfig);
+        }
+        
+        // Bind filter events
+        $('#tagFilter, #yearFilter, #showAllResults').change(applyFilters);
+        $('#searchInput').on('input', applyFilters);
+        
+        // Initialize DataTable with custom settings
         $("#basic-datatables").DataTable({
           pageLength: 25,
           order: [[0, 'desc']],
@@ -210,8 +372,12 @@
           columnDefs: [
             { orderable: true, className: 'reorder', targets: 0 },
             { orderable: false, targets: '_all' }
-          ]
+          ],
+          searching: false
         });
+        
+        // Initialize filters after a delay to ensure table is populated
+        setTimeout(initializeFilters, 100);
      });
     </script>
   </body>

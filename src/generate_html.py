@@ -89,42 +89,10 @@ class Generator:
     # Process each row and classify based on repo_analysis_tags
     if 'repo_analysis_tags' in df.columns:
       for tags_str in df['repo_analysis_tags'].fillna(''):
-        tags_lower = str(tags_str).lower()
-        
-        # Track which categories this row matches (can match multiple)
-        matched = False
-        
-        # Classification rules (in order of priority)
-        if '度量' in tags_lower or ('mea' in tags_lower and 'measurement' not in tags_lower):
-          field_counts['Measurement (MEA)'] += 1
-          matched = True
-        elif 'model' in tags_lower:
-          field_counts['Aging process analysis (ANA)'] += 1
-          matched = True
-        elif 'measurement' in tags_lower:
-          field_counts['Aging process analysis (ANA)'] += 1
-          matched = True
-        elif 'hybrid' in tags_lower:
-          field_counts['Aging process analysis (ANA)'] += 1
-          matched = True
-        elif 'arb prediction' in tags_lower or 'arb' in tags_lower or 'pre' in tags_lower:
-          field_counts['Prediction (PRE)'] += 1
-          matched = True
-        elif 'rej' in tags_lower:
-          field_counts['Rejuvenation (REJ)'] += 1
-          matched = True
-        elif 'testing' in tags_lower or 'tes' in tags_lower:
-          field_counts['Testing (TES)'] += 1
-          matched = True
-        elif 'other' in tags_lower:
-          field_counts['Other Mitigation Methods (OTM)'] += 1
-          matched = True
-        elif 'classification' in tags_lower or '分析bug报告' in tags_lower or '逻辑分析' in tags_lower or 'udn' in tags_lower:
-          field_counts['Understanding (UND)'] += 1
-          matched = True
-        
-        # If no specific match found, classify as 'Other'
-        if not matched:
+        category_name, _ = self._classify_tags_internal(tags_str)
+        if category_name in field_counts:
+          field_counts[category_name] += 1
+        else:
           field_counts['Other'] += 1
           print(f'[DEBUG] Unclassified tags: "{tags_str}"')
     else:
@@ -162,6 +130,40 @@ class Generator:
       df.to_csv(self.list_filename, sep=',', encoding='utf-8', index=False, header=True)
 
     return data
+
+  def _classify_tags_internal(self, tags_str):
+    """
+    Internal method to classify tags based on repo_analysis_tags content.
+    Returns tuple: (category_name, css_class)
+    """
+    if not tags_str or str(tags_str).strip() == '':
+      return 'Other', 'other'
+    
+    tags_lower = str(tags_str).lower()
+    
+    # Classification rules (in order of priority)
+    if '度量' in tags_lower or ('mea' in tags_lower and 'measurement' not in tags_lower):
+      return 'Measurement (MEA)', 'measurement'
+    elif 'model' in tags_lower:
+      return 'Aging process analysis (ANA)', 'analysis'
+    elif 'measurement' in tags_lower:
+      return 'Aging process analysis (ANA)', 'analysis'
+    elif 'hybrid' in tags_lower:
+      return 'Aging process analysis (ANA)', 'analysis'
+    elif 'arb prediction' in tags_lower or 'arb' in tags_lower or 'pre' in tags_lower:
+      return 'Prediction (PRE)', 'prediction'
+    elif 'rej' in tags_lower:
+      return 'Rejuvenation (REJ)', 'rejuvenation'
+    elif 'testing' in tags_lower or 'tes' in tags_lower:
+      return 'Testing (TES)', 'testing'
+    elif 'other' in tags_lower or '其他' in tags_lower:
+      return 'Other Mitigation Methods (OTM)', 'other-mitigation'
+    elif 'classification' in tags_lower or '分析bug报告' in tags_lower or '逻辑分析' in tags_lower or 'udn' in tags_lower:
+      return 'Understanding (UND)', 'understanding'
+    elif '现象分析' in tags_lower:
+      return 'Understanding (UND)', 'understanding'
+    print(f'[DEBUG] Unclassified tags: "{tags_lower}"')
+    return 'Other', 'other'
 
   def generate_index(self, date):
     """
@@ -227,11 +229,18 @@ class Generator:
     print('[INFO] succesfully update list.html"')
 
 
+  def classify_tag(self, tags_str):
+    """
+    Classify a paper based on its repo_analysis_tags using the same logic as index page pie chart
+    """
+    return self._classify_tags_internal(tags_str)
+
   def generate_list(self):
     """
     Generate the static components/list.html file. Need to reaplce the followings:
     * Description of the sub-title <- number of papers
     * Data table <- complete paper list
+    * Add tag classification and filtering functionality
     """
     # read the template HTML file 
     with open('pages/_list.html', 'r') as file:
@@ -289,30 +298,200 @@ class Generator:
     # replace "XX papers included"
     element = soup.find(id='replace-description')
     element.string = '{} papers included'.format(len(self.papers))
+    
+    # Update filter counts in the template
+    filtered_count_element = soup.find(id='filteredCount')
+    if filtered_count_element:
+      filtered_count_element.string = str(len(self.papers))
 
     # replace data table 
     element = soup.find(id='replace-paper-data-tbody')
     element.string = ''
-    # print(element)
-
+    
+    # collect all years for the year filter
+    years = sorted(list(set([paper.year for paper in self.papers])), reverse=True)
+    
     # create a new row for each item in data
     # and add this new row into the HTML table
     for each in self.papers:
+      # Get classification tag for this paper
+      tag_display, tag_class = self.classify_tag(getattr(each, 'repo_analysis_tags', ''))
+      
+      # Define tag colors based on category
+      tag_colors = {
+        'measurement': 'badge-primary',
+        'analysis': 'badge-info', 
+        'prediction': 'badge-warning',
+        'rejuvenation': 'badge-success',
+        'testing': 'badge-danger',
+        'other-mitigation': 'badge-secondary',
+        'understanding': 'badge-und',
+        'other': 'badge-light'
+      }
+      tag_color = tag_colors.get(tag_class, 'badge-light')
+      
       new_row = soup.new_tag('tr')
-      name_cell = BeautifulSoup('<td>{}</td>'.format(each.year), 'html.parser')
-      age_cell = BeautifulSoup(
-        '<td><p>{}<br><strong>{}</strong><br><em>{}</em></p></td>'.format(
-          each.author, each.title, each.venue_str()), 'html.parser')
+      new_row['data-tag'] = tag_class
+      new_row['data-year'] = str(each.year)
+      
+      year_cell = BeautifulSoup('<td>{}</td>'.format(each.year), 'html.parser')
+      
+      # Enhanced publication cell with tag badge
+      # choose readable text color: dark text on light badges, white text otherwise
+      text_color = 'text-dark' if tag_color == 'badge-light' else 'text-white'
+      pub_cell_html = '''
+      <td>
+        <div class="mb-2">
+          <span class="badge {} {}">{}</span>
+        </div>
+        <p>{}<br/><strong>{}</strong><br/><em>{}</em></p>
+      </td>
+      '''.format(tag_color, text_color, tag_display, each.author, each.title, each.venue_str())
+      pub_cell = BeautifulSoup(pub_cell_html, 'html.parser')
+      
       doi_cell = BeautifulSoup(
         '<td><a href="https://www.doi.org/{}" target="_blank">DOI</a></td>'.format(
           each.doi), 'html.parser')
 
-      new_row.append(name_cell)
-      new_row.append(age_cell)
+      new_row.append(year_cell)
+      new_row.append(pub_cell)
       new_row.append(doi_cell)
       element.append(new_row)
-      # print(element)
 
+    # Add JavaScript for filtering functionality - replace existing DataTable initialization
+    filter_script = '''
+      $(document).ready(function () {
+        // Store all rows data for filtering
+        var allRowsData = [];
+        var years = {};
+        
+        // Collect all data and years
+        $('#basic-datatables tbody tr').each(function() {
+          var $row = $(this);
+          var rowData = {
+            element: $row.clone(),
+            tag: $row.data('tag'),
+            year: $row.data('year'),
+            text: $row.text().toLowerCase()
+          };
+          allRowsData.push(rowData);
+          
+          var year = $row.data('year');
+          if (year) years[year] = true;
+        });
+        
+        // Populate year filter
+        var sortedYears = Object.keys(years).sort((a, b) => b - a);
+        sortedYears.forEach(function(year) {
+          $('#yearFilter').append('<option value="' + year + '">' + year + '</option>');
+        });
+        
+        // Filter function - operates on all data
+        function applyFilters() {
+          var tagFilter = $('#tagFilter').val();
+          var yearFilter = $('#yearFilter').val();
+          var searchTerm = $('#searchInput').val().toLowerCase();
+          var showAllResults = $('#showAllResults').val() === 'all';
+          
+          // Filter and re-populate table (build list first)
+          var filteredData = [];
+          allRowsData.forEach(function(rowData) {
+            var show = true;
+            
+            // Tag filter
+            if (tagFilter && rowData.tag !== tagFilter) {
+              show = false;
+            }
+            
+            // Year filter
+            if (yearFilter && rowData.year.toString() !== yearFilter) {
+              show = false;
+            }
+            
+            // Search filter
+            if (searchTerm && !rowData.text.includes(searchTerm)) {
+              show = false;
+            }
+            
+            if (show) {
+              filteredData.push(rowData);
+            }
+          });
+          
+          // Update result counts
+          $('#filteredCount').text(filteredData.length);
+          if (filteredData.length !== allRowsData.length) {
+            $('#totalCount').show().html(' (out of ' + allRowsData.length + ' total)');
+          } else {
+            $('#totalCount').hide();
+          }
+
+          // Destroy existing DataTable first to avoid restoring original rows
+          if ($.fn.DataTable.isDataTable('#basic-datatables')) {
+            $('#basic-datatables').DataTable().destroy();
+          }
+
+          // Clear tbody and append filtered rows
+          $('#basic-datatables tbody').empty();
+          filteredData.forEach(function(rowData) {
+            $('#basic-datatables tbody').append(rowData.element.clone());
+          });
+          
+          // Configure DataTable based on display option
+          var dataTableConfig = {
+            order: [[0, 'desc']],
+            rowReorder: true,
+            columnDefs: [
+              { orderable: true, className: 'reorder', targets: 0 },
+              { orderable: false, targets: '_all' }
+            ],
+            searching: false,
+            info: true
+          };
+          
+          if (showAllResults) {
+            // Show all results without pagination
+            dataTableConfig.paging = false;
+            dataTableConfig.language = {
+              info: 'Showing all _TOTAL_ entries'
+            };
+          } else {
+            // Show with pagination
+            dataTableConfig.pageLength = 25;
+            dataTableConfig.paging = true;
+            dataTableConfig.language = {
+              info: 'Showing _START_ to _END_ of _TOTAL_ entries'
+            };
+          }
+          
+          // Reinitialize DataTable
+          $("#basic-datatables").DataTable(dataTableConfig);
+        }
+        
+        // Bind filter events
+        $('#tagFilter, #yearFilter, #showAllResults').change(applyFilters);
+        $('#searchInput').on('input', applyFilters);
+        
+        // Initialize DataTable with custom settings
+        $("#basic-datatables").DataTable({
+          pageLength: 25,
+          order: [[0, 'desc']],
+          rowReorder: true,
+          columnDefs: [
+            { orderable: true, className: 'reorder', targets: 0 },
+            { orderable: false, targets: '_all' }
+          ],
+          // Disable default search since we have custom filters
+          searching: false
+        });
+     });
+    '''
+    
+    # Replace the existing script section instead of adding a new one
+    existing_script = soup.find('script', string=lambda text: text and 'basic-datatables' in text and 'DataTable' in text)
+    if existing_script:
+      existing_script.string = filter_script
+    
     # write the new HTML
     with open('components/list.html', 'w', encoding='utf-8') as file:
       file.write(str(soup))

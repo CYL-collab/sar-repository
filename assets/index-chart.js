@@ -44,11 +44,11 @@ var myPieChart = new Chart(pieChart, {
   data: {
     datasets: [
       {
-        data: [341, 0, 0, 0, 0, 0, 0, 0],
+        data: [216, 51, 26, 20, 12, 10, 6, 0],
         borderWidth: 0,
       },
     ],
-    labels: ["Other", "Understanding (UND)", "Testing (TES)", "Measurement (MEA)", "Aging process analysis (ANA)", "Rejuvenation (REJ)", "Prediction (PRE)", "Other Mitigation Methods (OTM)"]
+    labels: ["Aging process analysis (ANA)", "Measurement (MEA)", "Prediction (PRE)", "Rejuvenation (REJ)", "Understanding (UND)", "Testing (TES)", "Other Mitigation Methods (OTM)", "Other"]
   },
   options: {
     responsive: true,
