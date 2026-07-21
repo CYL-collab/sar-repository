@@ -1,0 +1,59 @@
+name: Sync paper list
+
+on:
+  schedule:
+    - cron: "17,47 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-paper-list
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download and validate upstream CSV
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          url="https://raw.githubusercontent.com/CYL-collab/SLR-of-SAR-Replication-Package/main/final_list_with_venue.csv"
+
+          curl --fail --location --retry 3 \
+            "$url" \
+            --output data/list.csv.new
+
+          test -s data/list.csv.new
+
+          expected_header="$(head -n 1 data/list.csv | tr -d '\r')"
+          actual_header="$(head -n 1 data/list.csv.new | tr -d '\r')"
+
+          if [ "$expected_header" != "$actual_header" ]; then
+            echo "CSV header mismatch; refusing to overwrite data/list.csv"
+            exit 1
+          fi
+
+          mv data/list.csv.new data/list.csv
+
+      - name: Commit changes
+        shell: bash
+        run: |
+          if git diff --quiet -- data/list.csv; then
+            echo "No upstream changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/list.csv
+          git commit -m "chore(data): sync list from SLR replication package"
+          git push
