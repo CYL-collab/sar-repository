@@ -1,4 +1,5 @@
 import csv
+import json
 import pandas as pd
 from bs4 import BeautifulSoup
 from papers import Paper
@@ -7,6 +8,8 @@ class Generator:
   def __init__(self, sort=False):
     self.list_filename = 'data/list.csv'
     self.scholar_filename = 'data/scholar.csv'
+    self.chart_template_filename = 'pages/_index-chart.js'
+    self.chart_filename = 'assets/index-chart.js'
 
     # sort csv and get statistic data 
     self.data = self.read_csv(sort) 
@@ -23,7 +26,7 @@ class Generator:
     with open(self.scholar_filename, 'r', encoding='utf-8') as file:
       for each in csv.DictReader(file):
         self.scholars.append(each)
-    
+
     print('[INFO] read {} papers from "{}"'.format(len(self.papers), self.list_filename))
     print('       read {} scholars from "{}"'.format(len(self.scholars), self.scholar_filename))
 
@@ -69,8 +72,10 @@ class Generator:
     # Now safe to sort
     df = df.sort_values(['year', 'booktitle', 'title'], ascending=False)
     
-    # cumulative number of publications
-    bar_data = df.groupby('year').size().to_frame('number')
+    # Cumulative number of publications. Invalid or missing years are kept in
+    # the paper list, but omitted from the time-series chart.
+    valid_years = df[df['year'] > 0]
+    bar_data = valid_years.groupby('year').size().to_frame('number')
     bar_data['cumulative'] = bar_data['number'].cumsum()
     print(bar_data)
 
@@ -108,23 +113,22 @@ class Generator:
     year = bar_data.index.values.tolist()
     number = bar_data['number'].values.tolist()
     cumulative = bar_data['cumulative'].values.tolist()
-    # find index for year 2000 (or first year >= 2000). If not present, start from 0
-    try:
-      index = year.index(2000)
-    except ValueError:
-      index = 0
-      for i, y in enumerate(year):
-        try:
-          if int(y) >= 2000:
-            index = i
-            break
-        except Exception:
-          continue
-    data['year'] = year[index:]
-    data['number'] = number[index:]
-    data['cumulative'] = cumulative[index:]
+    data['year'] = year
+    data['number'] = number
+    data['cumulative'] = cumulative
+    data['min_year'] = min(year) if year else None
+    data['max_year'] = max(year) if year else None
     data['fields'] = pie_data['field'].values.tolist()
     data['count'] = pie_data['count'].values.tolist()
+    # repo_venue_tags is the repository's curated venue label. Count distinct
+    # non-empty labels case-insensitively so formatting case cannot inflate the
+    # dashboard value. A composite label remains one publication venue entry.
+    venue_values = df.get('repo_venue_tags', pd.Series(dtype=str)).dropna()
+    data['venue_count'] = len({
+      str(value).strip().casefold()
+      for value in venue_values
+      if str(value).strip()
+    })
 
     if sort:
       df.to_csv(self.list_filename, sep=',', encoding='utf-8', index=False, header=True)
@@ -165,12 +169,12 @@ class Generator:
     print(f'[DEBUG] Unclassified tags: "{tags_lower}"')
     return 'Other', 'other'
 
-  def generate_index(self, date):
+  def generate_index(self):
     """
     Generate the static index.html file. Need to reaplce the followings:
-    * Description of the sub-title <- last update date
-    * Statistics <- number of papers, [TODO: scholars, institutions]
-    * Bar chart <- cumulative number of publications (with date)
+    * Description of the sub-title <- publication year range
+    * Statistics <- number of papers, scholars, and publication venues
+    * Bar chart <- cumulative number of publications
     * Pie chart <- distribution of research topics
     """
     # read the template HTML file 
@@ -196,8 +200,12 @@ class Generator:
       pass
 
     # description and statistics
+    min_year = self.data['min_year']
+    max_year = self.data['max_year']
+    year_range = '{}-{}'.format(min_year, max_year) if min_year is not None else 'year unavailable'
+
     element = soup.find(id='replace-description')
-    element.string = 'Collection of Research Papers of Software Aging'.format(date)
+    element.string = 'Collection of Research Papers on Software Aging ({})'.format(year_range)
 
     element = soup.find(id='replace-number-1')
     element.string = '{}'.format(len(self.papers))
@@ -205,23 +213,28 @@ class Generator:
     element = soup.find(id='replace-number-2')
     element.string = '{}'.format(len(self.scholars))
 
-    element = soup.find(id='replace-bar-descrption')
-    element.string = 'From 1995 to {}'.format(date.split()[-1])
-  
-    # chart data
-    with open('assets/index-chart.js','r') as f:
-      lines = f.readlines()
-    
-    # bar chart
-    lines[6] = '    labels: [{}],\n'.format(', '.join(['"{}"'.format(e) for e in self.data['year']]))
-    lines[12] = '        data: {}\n'.format(str(self.data['cumulative']))
-    # pie chart
-    lines[46] = '        data: {},\n'.format(str(self.data['count']))
-    lines[50] = '    labels: [{}]\n'.format(', '.join(['"{}"'.format(e) for e in self.data['fields']]))
+    element = soup.find(id='replace-number-venues')
+    element.string = '{}'.format(self.data['venue_count'])
 
-    with open('assets/index-chart.js', 'w') as f:
-      for line in lines:
-        f.write(line)
+    element = soup.find(id='replace-bar-descrption')
+    element.string = 'From {} to {}'.format(min_year, max_year) if min_year is not None else 'No publication years available'
+  
+    # Render chart data through explicit template placeholders rather than
+    # relying on fixed JavaScript line numbers.
+    with open(self.chart_template_filename, 'r', encoding='utf-8') as f:
+      chart_script = f.read()
+
+    replacements = {
+      '__BAR_LABELS__': json.dumps([str(e) for e in self.data['year']], ensure_ascii=False),
+      '__BAR_DATA__': json.dumps(self.data['cumulative'], ensure_ascii=False),
+      '__PIE_DATA__': json.dumps(self.data['count'], ensure_ascii=False),
+      '__PIE_LABELS__': json.dumps(self.data['fields'], ensure_ascii=False),
+    }
+    for placeholder, value in replacements.items():
+      chart_script = chart_script.replace(placeholder, value)
+
+    with open(self.chart_filename, 'w', encoding='utf-8') as f:
+      f.write(chart_script)
 
     # write the new HTML
     with open('index.html', 'w') as file:
@@ -565,7 +578,8 @@ class Generator:
     print('[INFO] succesfully generated components/coauthor.html')
 
 if __name__ == '__main__':
-  g = Generator(sort=True)
-  g.generate_index(date='Nov 2024')
+  # Page generation must not rewrite or reorder the source CSV.
+  g = Generator(sort=False)
+  g.generate_index()
   g.generate_list()
   g.generate_coauthor()

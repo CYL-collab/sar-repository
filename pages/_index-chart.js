@@ -4,13 +4,13 @@ var pieChart = document.getElementById("pieChart").getContext("2d");
 var myBarChart = new Chart(barChart, {
   type: "bar",
   data: {
-    labels: ["1995", "1996", "1997", "1998", "1999", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"],
+    labels: __BAR_LABELS__,
     datasets: [
       {
         label: "# Publications",
         backgroundColor: "rgb(23, 125, 255)",
         borderColor: "rgb(23, 125, 255)",
-        data: [2, 3, 5, 7, 8, 15, 21, 25, 26, 30, 37, 44, 53, 56, 84, 97, 111, 128, 146, 158, 173, 191, 200, 218, 241, 265, 287, 307, 324, 346, 351]
+        data: __BAR_DATA__
       },
     ],
   },
@@ -44,11 +44,11 @@ var myPieChart = new Chart(pieChart, {
   data: {
     datasets: [
       {
-        data: [223, 51, 26, 21, 13, 10, 7, 0],
+        data: __PIE_DATA__,
         borderWidth: 0,
       },
     ],
-    labels: ["Aging process analysis (ANA)", "Measurement (MEA)", "Prediction (PRE)", "Rejuvenation (REJ)", "Understanding (UND)", "Testing (TES)", "Other Mitigation Methods (OTM)", "Other"]
+    labels: __PIE_LABELS__
   },
   options: {
     responsive: true,

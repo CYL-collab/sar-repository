@@ -38,8 +38,8 @@ class Librarian:
   
   def search_new_papers(self, keywords, year=None, output_file='data/add.csv'):
     """
-    Search DBLP and write new papers found into a file. Note that this often contain papers 
-    that are irrelevant to CIT.
+    Search DBLP and write new papers found into a file. Note that this often contains papers
+    that are irrelevant to the SAR repository.
     """
     # these paper titles are already included in repository
     paper_titles = [e['title'].lower() for e in self.papers]
@@ -63,7 +63,7 @@ class Librarian:
       for each in new_papers:
         writer.writerow(each)
 
-    print('[librarian] write {} papers to "{}" (might be irrelevant to CIT)'.format(len(new_papers), output_file))
+    print('[librarian] write {} papers to "{}" (might be irrelevant to the SAR repository)'.format(len(new_papers), output_file))
 
   def update_scholar(self):
     """

@@ -15,7 +15,7 @@ class DBLP:
 
   def search_paper(self, keywords=None, already_have=[], excluded=[], after_year=None) -> list:
     """
-    Search papers by keywords, and return a list of newly identified papers (in cit-repository format).
+    Search papers by keywords, and return a list of newly identified papers in SAR repository format.
     The papers that are already included in already_have[] and excluded[] lists will be ignored. According 
     to DBLP, the maximum number returned will be 1000.
 
@@ -73,7 +73,7 @@ class DBLP:
   def search_by_title(self, paper_title) -> dict:
     """
     Determine whether a given paper (title) is included in DBLP. If it is included, return the
-    cit-repository format of this paper.
+    SAR repository format of this paper.
     """
     url = self.publ_url + '?q=' + '+'.join(paper_title.split(' ')) + '&format=json'
     response = requests.post(url)
@@ -92,7 +92,7 @@ class DBLP:
   
   def parse_paper_info(self, info):
     """
-    Convert the DBLP search return data (of a paper) to the cit-repository format. Here, the parimary goal
+    Convert the DBLP search return data (of a paper) to the SAR repository format. Here, the primary goal
     is to convert the publication venue abbr name into its corresponding full name.
     """
     # handle publication venue

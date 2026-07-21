@@ -1,20 +1,38 @@
-# Scripts
+# SAR Repository Scripts
 
-This directory includes scripts for data management of the cit-repository.
+This directory contains the data-management and static-site generation scripts for the Software Aging Repository (SAR).
 
-## Librarian
+Run all commands from the repository root so that relative paths such as `data/list.csv` resolve correctly.
 
-`librarian.py` can be used for searching new papers and collecting scholar names.
+## Data maintenance
 
-* `search_new_papers()`: Search new papers from DBLP.
-  * The new papers found will be written into an `add.csv` file.
-  * After this step, need to perform further manual processing to filter out irrelvant papers, and also determine filed for each paper.
+`librarian.py` manages papers and scholars:
 
-* `update_scholar()`: Update the scholar data file according to the current paper list data file.
+- `search_new_papers()` searches DBLP for candidate software-aging and software-rejuvenation papers and writes them to `data/add.csv`. Candidates require manual relevance and metadata review before inclusion.
+- `update_scholar()` derives authors from the current paper list, normalizes name variants, merges likely duplicates, and updates `data/scholar.csv`.
+- `check_paper_inclusion()` checks whether a supplied list of paper titles is indexed by DBLP.
 
-## Generate static HTML Files
+`dblp.py` contains the DBLP API client used by the librarian. `data_clean.py` provides legacy CSV normalization helpers, while `papers.py` defines the publication representation used by the HTML generator.
 
-`generate_html.py` can be used to generate the final static HTML pages for the repository.
+## Static-site generation
 
-* `generate_index()`: the `index.html` file
-* `generate_list()`: the `components/list.html` file
+`generate_coauthor_preview.py` reads `data/list.csv` and generates:
+
+- `assets/coauthor-preview.json`, the weighted co-authorship graph;
+- `data/coauthor_mapping.csv`, the raw-to-canonical author mapping.
+
+`generate_html.py` reads the maintained CSV files and templates to generate:
+
+- `index.html`, the repository dashboard;
+- `components/list.html`, the searchable and filterable paper list;
+- `components/coauthor.html`, the co-author network page;
+- `assets/index-chart.js`, the data-driven dashboard charts.
+
+Paper counts, scholar counts, venue counts, publication-year ranges, and chart values are derived from the CSV data during generation.
+
+To rebuild all generated assets:
+
+```bash
+python src/generate_coauthor_preview.py
+python src/generate_html.py
+```
